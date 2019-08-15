@@ -9,11 +9,29 @@ main {
     margin: 0 auto;
     width: 710px;
     font-family: monospace;
+    position: relative;
+    padding-top: 10em;
+}
+
+#night {
+    position: absolute;
+    right: 0px;
+    top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #333;
+    font-weight: bold;
+    color: #f3f3f3;
+    height: 36px;
+    font-size: 24px;
+    width: 36px;
+    cursor: pointer;
 }
 
 main h1 {
     margin: 0;
-    margin-top: 1.5em;
     font-size: 4.6rem;
     text-transform: uppercase;
 }
