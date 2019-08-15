@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    background-color: #f3f3f3;
+    font-family: 'Arial';
+    color: #333;
+}
+
+main {
+   
+    margin: 0 auto;
+    width: 710px;
+    min-height: 100vh;
+    font-family: monospace;
+}
+
+main h1 {
+    margin: 0;
+    margin-top: 1.5em;
+    font-size: 4.6rem;
+    text-transform: uppercase;
+}
+
+main h2 {
+    margin: 0;
+    margin: 0em 0;
+    font-size: 2.3rem;
+    color: #555;
+    text-transform: uppercase;
+}
+
+p#about {
+    margin: 2em 0;
+    font-size: 1.3rem;
+}
+
+.color {
+    color: #7c00c3;
+    font-style: italic;
+    text-transform: lowercase;
+}
