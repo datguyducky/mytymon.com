@@ -28,8 +28,15 @@ main h2 {
     text-transform: uppercase;
 }
 
-p#about {
-    margin: 2em 0;
+p.about {
+    margin: 0;
+    margin-top: 2em;
+    font-size: 1.3rem;
+}
+
+#inside2 {
+    margin: 0;
+    margin-top: 0.3em;
     font-size: 1.3rem;
 }
 
