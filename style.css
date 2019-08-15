@@ -101,3 +101,13 @@ p.about {
     grid-column-gap: 1.5em;
     grid-row-gap: 0.5em;
 }
+
+@media (max-width: 790px) {
+    body {
+        padding: 2em;
+    }
+    
+    main {
+        width: 100%;
+    }
+}
