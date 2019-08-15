@@ -6,10 +6,8 @@ body {
 }
 
 main {
-   
     margin: 0 auto;
     width: 710px;
-    min-height: 100vh;
     font-family: monospace;
 }
 
@@ -20,7 +18,7 @@ main h1 {
     text-transform: uppercase;
 }
 
-main h2 {
+#me {
     margin: 0;
     margin: 0em 0;
     font-size: 2.3rem;
@@ -30,11 +28,11 @@ main h2 {
 
 p.about {
     margin: 0;
-    margin-top: 2em;
+    margin-top: 4em;
     font-size: 1.3rem;
 }
 
-#inside2 {
+#about-add{
     margin: 0;
     margin-top: 0.3em;
     font-size: 1.3rem;
@@ -44,4 +42,62 @@ p.about {
     color: #7c00c3;
     font-style: italic;
     text-transform: lowercase;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4em 0;
+}
+
+#contact h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#contact #sites {
+    margin: 0.2em 0 1.5em 0;
+}
+
+#contact ul {
+    padding: 0;
+    margin: 0;
+}
+
+#contact li {
+    cursor: pointer;
+    padding: 0;
+    float: left;
+    margin: 0 1em;
+    font-size: 1.3rem;
+}
+
+#contact li:hover {
+    text-decoration: underline;
+}
+
+#contact h4 {
+    margin: 0.2em;
+    background-color: #7c00c3;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    color: #f3f3f3;
+    font-size: 1.1rem;
+}
+
+#work {
+    text-align: center;
+}
+
+#work h2 {
+    font-size: 2.3rem;
+    margin: 0;
+}
+
+#work-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.5em;
+    grid-row-gap: 0.5em;
 }
