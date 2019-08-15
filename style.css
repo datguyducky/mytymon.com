@@ -1,16 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+
 body {
     margin: 0;
     background-color: #f3f3f3;
-    font-family: 'Arial';
+    font-family: 'Space Mono', monospace; /* space :) */
     color: #333;
+    transition: background-color 0.6s linear;
 }
 
 main {
     margin: 0 auto;
     width: 710px;
-    font-family: monospace;
     position: relative;
     padding-top: 10em;
+    animation: 0.6s linear 0s 1 slideInFromBottom;
 }
 
 #night {
@@ -34,6 +38,7 @@ main h1 {
     margin: 0;
     font-size: 4.6rem;
     text-transform: uppercase;
+    line-height: 1.1em;
 }
 
 #me {
@@ -118,6 +123,15 @@ p.about {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 1.5em;
     grid-row-gap: 0.5em;
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(-20%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 790px) {
