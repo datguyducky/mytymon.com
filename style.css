@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
 
 body {
     margin: 0;
     background-color: #f3f3f3;
     font-family: 'Space Mono', monospace; /* space :) */
     color: #333;
-    transition: background-color 0.6s linear;
+    transition: background-color 0.3s linear;
 }
 
 main {
