@@ -115,13 +115,29 @@ p.about {
 #work h2 {
     font-size: 2.3rem;
     margin: 0;
+    text-decoration: underline;
 }
 
 #work-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
     grid-column-gap: 1.5em;
     grid-row-gap: 0.5em;
+    margin-bottom: 4em;
+}
+
+/* projects */ 
+.project-card {
+    width: auto;
+    height: 140px;
+}
+
+#diceware-gen {
+    background-image: url('projects/diceware.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @keyframes slideInFromBottom {
@@ -140,5 +156,11 @@ p.about {
     
     main {
         width: 100%;
+    }
+}
+
+@media (max-width: 490px) {
+    .project-card {
+        height: 90px;
     }
 }
