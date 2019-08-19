@@ -1,6 +1,14 @@
-var mode = "dark";
-
+//function to save 'mode' to storage.
 function darkMode() {
+    currentMode = localStorage.getItem("mode");
+    if(currentMode == "dark"){localStorage.setItem("mode", "nodark");}
+    else{localStorage.setItem("mode", "dark");}
+    location.reload(false)
+}
+
+//on page load getting 'mode' from local storage -> and if 'mode' is set to 'dark' then page style is set to dark mode.
+window.onload = function() {
+    var mode = localStorage.getItem("mode");
     var body = document.getElementById('body');
     var btn = document.getElementById('night');
     var header = document.getElementById('me');
@@ -14,16 +22,10 @@ function darkMode() {
         
         header.style.color = '#bbb';
 
-        mode = "nodark";
-    } else {
-        body.style.backgroundColor = '#f3f3f3';
-        body.style.color = '#333';
-        
-        btn.style.backgroundColor = '#333';
-        btn.innerHTML = '🌕';
+        localStorage.setItem("mode", "dark");
+    }
 
-        header.style.color = '#555';
-
-        mode = "dark";
+    else {
+        console.log("dark mode is off");
     }
 }
