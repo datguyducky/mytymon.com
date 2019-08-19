@@ -98,6 +98,10 @@ p.about {
     text-decoration: underline;
 }
 
+#contact a {
+    color: inherit;
+}
+
 #contact h4 {
     margin: 0.2em;
     background-color: #7c00c3;
