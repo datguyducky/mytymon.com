@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Craigslist Redesign - Listing</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="main.js"></script>
+</head>
+<body>
+    <div id="main-container">
+        <nav id="nav">
+            <div id="nav-navbar">
+                <div id="left-nav">
+                    <span id="navbar-logo"></span>
+                    <span id="navbar-name">Craigslist</span>
+                    <span id="navbar-language">English</span>
+                </div>
+                <div id="right-nav">
+                    <span id="navbar-account">MY ACCOUNT</span>
+                    <span id="navbar-post">Post classifieds</span>
+                </div>
+            </div>
+            <div id="nav-searchbar">
+                <div id="searchbar-container">
+                    <div id="searchbar">
+                        <div id="search-category">
+                            <span onclick="moreCat()" id="selected-category">HOUSING ▼</span>
+                            <div id="more-categories">
+                                <!-- menu for more categories -->
+                                <ul id="categories-menu">
+                                    <li class="category-click" id="Housing">Housing</li>
+                                    <li class="category-click" id="News">News</li>
+                                    <li class="category-click" id="Jobs">Jobs</li>
+                                    <li class="category-click" id="Apple">Apple</li>
+                                    <li class="category-click" id="Legal">Legal</li>
+                                </ul>
+                                <!-- list of 'categories' -->
+                                <div id="list-container">
+                                    <ul class="categories-list">
+                                        <li>Activities</li>
+                                        <li>Artists</li>
+                                        <li>Childcare</li>
+                                        <li>Classes</li>
+                                        <li>Events</li>
+                                        <li>General</li>
+                                        <li>Groups</li>
+                                    </ul>
+                                    <ul class="categories-list">
+                                        <li>Local News</li>
+                                        <li>Lost+Found</li>
+                                        <li>Musicians</li>
+                                        <li>Pets</li>
+                                        <li>Politics</li>
+                                        <li>Rideshare</li>
+                                    </ul>
+                                    <ul class="categories-list">
+                                        <li>Local News</li>
+                                        <li>Lost+Found</li>
+                                        <li>Musicians</li>
+                                        <li>Pets</li>
+                                        <li>Politics</li>
+                                        <li>Rideshare</li>
+                                    </ul>
+                                    <ul class="categories-list">
+                                        <li>Local News</li>
+                                        <li>Lost+Found</li>
+                                        <li>Musicians</li>
+                                        <li>Pets</li>
+                                        <li>Politics</li>
+                                        <li>Rideshare</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="search-input">
+                                <input type="text" placeholder="SEARCH FOR HOUSING">
+                            </div>
+                            <div id="search-location">
+                                <img src="../img/location-pin.svg">
+                                <input type="text" placeholder="CHICAGO, IL, USA">
+                            </div>
+                        </div> 
+                    <a href="../index.html" id="searchbar-button"></a>
+                    <div id="open-mobile-menu" onclick="mobileSettings()">=</div>
+                </div>
+            </div>
+            <div id="search-options-mobile" style="display: none;">
+                <div class="options-list">
+                    <h2 onclick="leftMoreCat(0)">Housing (15) ▼</h2>
+                    <ul class="cat-ul">
+                        <li><input type="checkbox" id="housing"><label for="housing">Housing (15)</label></li>
+                        <li><input type="checkbox" id="news"><label for="news">News (0)</label></li>
+                        <li><input type="checkbox" id="jobs"><label for="jobs">Jobs (0)</label></li>
+                        <li><input type="checkbox" id="apple"><label for="apple">Apple (0)</label></li>
+                        <li><input type="checkbox" id="legal"><label for="legal">Legal (0)</label></li>
+                    </ul>
+                </div>
+                <div class="options-list" id="options-display">
+                    <h2 onclick="leftMoreCat(1)">SHOW ONLY ▼</h2>
+                    <ul class="cat-ul">
+                        <li><input type="checkbox" id="titles"><label for="titles">Search titles only</label></li>
+                        <li><input type="checkbox" id="image"><label for="image">Has image</label></li>
+                        <li><input type="checkbox" id="today"><label for="today">Posted today</label></li>
+                        <li><input type="checkbox" id="dup"><label for="dup">Bundle duplicates</label></li>
+                    </ul>
+                </div>
+                <div id="options-price">
+                    <h2>PRICE RANGE</h2>
+                    <div id="input-container">
+                        <input type="number" name="min-price" id="min-price">
+                        <input type="number" name="max-price" id="max-price">
+                    </div>
+                </div>
+                <div id="options-size">
+                    <h2>SIZE<sup>(min/max)</sup></h2>
+                    <div id="size-container">
+                        <!-- on the left (min) -->
+                        <select>
+                            <option>1 Bedroom</option>
+                            <option>2 Bedrooms</option>
+                            <option>3 Bedrooms</option>
+                            <option>4 Bedrooms</option>
+                        </select>
+                        <select disabled>
+                            <option>10 Bedrooms</option>
+                        </select>
+                        <!-- on the right (max) -->
+                        <select>
+                            <option>1 Bathroom</option>
+                            <option>2 Bathrooms</option>
+                            <option>3 Bathrooms</option>
+                        </select>
+                        <select>
+                            <option>3 Bathrooms</option>
+                            <option>4 Bathrooms</option>
+                            <option>5 Bathrooms</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="options-buttons">
+                    <div id="button-update">Update</div>
+                    <div id="button-reset">Reset filters</div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div id="search-options">
+                <div class="options-list">
+                    <h2 onclick="leftMoreCat(0)">Housing (15) ▼</h2>
+                    <ul class="cat-ul">
+                        <li><input type="checkbox" id="housing"><label for="housing">Housing (15)</label></li>
+                        <li><input type="checkbox" id="news"><label for="news">News (0)</label></li>
+                        <li><input type="checkbox" id="jobs"><label for="jobs">Jobs (0)</label></li>
+                        <li><input type="checkbox" id="apple"><label for="apple">Apple (0)</label></li>
+                        <li><input type="checkbox" id="legal"><label for="legal">Legal (0)</label></li>
+                    </ul>
+                </div>
+                <div class="options-list" id="options-display">
+                    <h2 onclick="leftMoreCat(1)">SHOW ONLY ▼</h2>
+                    <ul class="cat-ul">
+                        <li><input type="checkbox" id="titles"><label for="titles">Search titles only</label></li>
+                        <li><input type="checkbox" id="image"><label for="image">Has image</label></li>
+                        <li><input type="checkbox" id="today"><label for="today">Posted today</label></li>
+                        <li><input type="checkbox" id="dup"><label for="dup">Bundle duplicates</label></li>
+                    </ul>
+                </div>
+                <div id="options-price">
+                    <h2>PRICE RANGE</h2>
+                    <div id="input-container">
+                        <input type="number" name="min-price" id="min-price">
+                        <input type="number" name="max-price" id="max-price">
+                    </div>
+                </div>
+                <div id="options-size">
+                    <h2>SIZE<sup>(min/max)</sup></h2>
+                    <div id="size-container">
+                        <!-- on the left (min) -->
+                        <select>
+                            <option>1 Bedroom</option>
+                            <option>2 Bedrooms</option>
+                            <option>3 Bedrooms</option>
+                            <option>4 Bedrooms</option>
+                        </select>
+                        <select disabled>
+                            <option>10 Bedrooms</option>
+                        </select>
+                        <!-- on the right (max) -->
+                        <select>
+                            <option>1 Bathroom</option>
+                            <option>2 Bathrooms</option>
+                            <option>3 Bathrooms</option>
+                        </select>
+                        <select>
+                            <option>3 Bathrooms</option>
+                            <option>4 Bathrooms</option>
+                            <option>5 Bathrooms</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="options-buttons">
+                    <div id="button-update">Update</div>
+                    <div id="button-reset">Reset filters</div>
+                </div>
+            </div>
+            <div id="listing-cards">
+                <div id="listing-header">
+                    <h1>Showing <span>1,586</span> Results</h1>
+                    <ul>
+                        <li>NEWEST ▼</li>
+                        <li><img src="../img/display.svg"></li>
+                    </ul>
+                </div>
+                <div id="listing-content">
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/card1.png')">
+                            <span class="text-price">$65</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/card2.png')">
+                            <span class="text-price">$65</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/card3.png')">
+                            <span class="text-price">$526</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">Federal Hill 2 Bedroom 1.5 Bath </div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/card4.png')">
+                            <span class="text-price">$46</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/cardall.png')">
+                            <span class="text-price">$95</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/card6.png')">
+                            <span class="text-price">$93</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/card7.png')">
+                            <span class="text-price">$29</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/cardall.png')">
+                            <span class="text-price">$11</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/card9.png')">
+                            <span class="text-price">$56</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/cardall.png')">
+                            <span class="text-price">$76</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/cardall.png')">
+                            <span class="text-price">$67</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                    <div class="list-card">
+                        <div class="card-img" style="background-image: url('../img/cardall.png')">
+                            <span class="text-price">$88</span>
+                        </div>
+                        <div class="card-text">
+                            <div class="text-name">1 Bedroom apartment</div>
+                            <div class="text-date">Feb 20</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
