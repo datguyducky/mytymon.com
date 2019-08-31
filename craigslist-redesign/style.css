@@ -15,7 +15,6 @@ nav {
     grid-template-rows: 46% 1fr 80px;
     background-color: #f3f4f6;
     position: relative;
-    animation: 0.8s ease-out 0s 1 slideInFromLeft;
 }
 
 #circle-red {
@@ -64,7 +63,7 @@ nav {
 
 @keyframes diagonal {
     0%       { transform: translatex(0px) translatey(0px) }
-    50%      { transform: translatex(-10em) translatey(10em); }
+    50%      { transform: translatex(-10em) translatey(10em) }
     100%     { transform: translatex(0px) translatey(0px) }
 }
 
@@ -89,7 +88,7 @@ nav {
 #nav-navbar {
     display: grid;
     grid-template-columns: 300px 1fr;
-    animation: 1.2s ease-out 0s 1 slideInFromTop;
+    animation: 0.6s ease-out 0s 1 slideInFromTop;
 }
 
 #navbar-left {
@@ -108,7 +107,7 @@ nav {
     padding: 24px 32px;
 }
 
-#left-container span:hover {
+#navbar-language:hover {
     text-decoration: underline;
 }
 
@@ -170,7 +169,7 @@ nav {
 
 #nav-header {
     margin-left: 300px;
-    animation: 0.8s ease-out 0s 1 slideInFromBottom;
+    animation: 0.6s ease-out 0s 1 slideInFromBottom;
 }
 
 #nav-header h1 {
@@ -199,7 +198,7 @@ main {
 
 #searchbar-position {
     position: relative;
-    animation: 0.6s ease-out 0s 1 slideInFromBottom;
+    animation: 0.4s ease-out 0s 1 slideInFromBottom;
 }
 
 #searchbar-container {
@@ -388,7 +387,12 @@ main {
     grid-auto-rows: 520px;
     grid-column-gap: 35px;
     grid-row-gap: 51px;
-    animation: 0.8s ease-out 0s 1 slideInFromLeft;
+    animation: fadein 1.8s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .category-header {
