@@ -69,7 +69,7 @@ p.about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4em 0;
+	margin: 4em 0;
 }
 
 #contact h3 {
@@ -78,28 +78,39 @@ p.about {
 }
 
 #contact #sites {
-    margin: 0.2em 0 1.5em 0;
-}
-
-#contact ul {
-    padding: 0;
-    margin: 0;
-}
-
-#contact li {
-    cursor: pointer;
-    padding: 0;
-    float: left;
-    margin: 0 1em;
-    font-size: 1.3rem;
-}
-
-#contact li:hover {
-    text-decoration: underline;
+	margin: 0.2em 0 1.5em 0;
+	display: flex;
+	color: #6e6e6e;
+	font-size: 1.2rem;
 }
 
 #contact a {
-    color: inherit;
+	color: inherit;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	margin: 0 12px;
+}
+
+#contact a:hover span{
+	color: #333;
+	text-decoration: underline;
+}
+
+#contact .feather {
+	margin-right: 4px;
+}
+
+#contact .feather-github {
+	color: #24292E;
+}
+
+#contact .feather-twitter {
+	color: #28AAE1;
+}
+
+#contact .feather-linkedin {
+	color: #0077B5;
 }
 
 #contact h4 {
