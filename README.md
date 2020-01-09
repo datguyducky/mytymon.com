@@ -1,5 +1,5 @@
 # mtymon.me
-This repository is for my portfolio website that's hosted on Github Pages. Below you will find links to repos of projects that are highlighted on it.
+This repository is for my portfolio website that's hosted on Github Pages. Below you can find links to repos of projects that are highlighted on it.
 
 ## My Projects:
 - [V - RSS Reader - App built with React Native](https://github.com/datguysheepy/v-rss-reader "V RSS Reader")
