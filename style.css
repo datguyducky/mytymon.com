@@ -82,6 +82,8 @@ p.about {
 	display: flex;
 	color: #6e6e6e;
 	font-size: 1.2rem;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 #contact a {
@@ -133,6 +135,15 @@ p.about {
     text-decoration: underline;
 }
 
+#work a {
+	text-decoration: none;
+}
+
+#work .v-card {
+	width: 320px;
+	height: auto;
+}
+
 #work-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -169,5 +180,9 @@ img {
     
     main {
         width: 100%;
-    }
+	}
+	
+	.v-card {
+		width: 210px !important;
+	}
 }
