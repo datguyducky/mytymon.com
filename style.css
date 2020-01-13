@@ -245,6 +245,7 @@ p.about {
 	position: absolute;
 	top: 0;
 	border-radius: 6px;
+	transition: opacity 0.6s;
 }
 
 .p-card:hover .p-card-overlay{
