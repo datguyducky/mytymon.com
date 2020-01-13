@@ -54,12 +54,6 @@ p.about {
     font-size: 1.3rem;
 }
 
-#about-add{
-    margin: 0;
-    margin-top: 0.3em;
-    font-size: 1.3rem;
-}
-
 .color {
     color: #7c00c3;
     font-style: italic;
@@ -279,13 +273,6 @@ p.about {
 	opacity: 0.75;
 }
 
-
-/* projects */ 
-.project-card {
-    width: 100%;
-    height: auto;
-}
-
 img {
     width: 100%;
     height: 100%;
@@ -307,10 +294,6 @@ img {
     
     main {
         width: 100%;
-	}
-	
-	.v-card {
-		width: 210px !important;
 	}
 }
 
