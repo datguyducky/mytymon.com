@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 body {
     margin: 0;
@@ -12,7 +13,7 @@ main {
     width: 710px;
     position: relative;
     padding-top: 10em;
-    animation: 0.6s linear 0s 1 slideInFromBottom;
+	animation: 0.4s linear 0s 1 slideInFromBottom;
 }
 
 #night {
@@ -121,37 +122,162 @@ p.about {
     border-radius: 0.5em;
     padding: 0.5em;
     color: #f3f3f3;
-    font-size: 1.1rem;
+	font-size: 1.1rem;
+	font-family: 'Open Sans', sans-serif;
 }
 
-#work {
-    text-align: center;
+#skills {
+	margin-bottom: 4em;
+}
+
+#skills h2 {
+	font-size: 2.3rem;
+	margin: 0;
+	text-align: center;
+	margin-bottom: 4px;
+}
+
+#skills h3 {
+	font-size: 1.3rem;
+	margin: 0;
+	text-align: center;
+}
+
+.skills-wrapper {
+	display: flex;
+	justify-content: center;
+	margin-top: 4px;
+	margin-bottom: 16px;
+	flex-wrap: wrap;
+}
+
+.s-card {
+	min-height: 64px;
+	min-width: 64px;
+	background-color: #fff;
+	border-radius: 8px;
+	cursor: pointer;
+	margin: 0 4px;
+	margin-bottom: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 3px 6px 5px 0px rgba(0,0,0,0.11);
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.08);;
+}
+
+.s-card>img {
+	transition: opacity 0.5s;
+	border-radius: 8px;
+}
+
+.s-card>p {
+	position: absolute;
+	opacity: 0;
+	font-size: 0.8rem;
+	text-align: center;
+	margin: 0;
+	padding: 4px;
+	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.s-card:hover img{
+	opacity: 0;
+}
+
+.s-card:hover p {
+	opacity: 1 !important;
+	transition: opacity 0.5s;
+}
+
+#work>p {
+	font-size: 1.3rem;
+	margin: 8px 0;
+	margin-bottom: 16px;
+}
+
+#work-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 24px;
+	margin-bottom: 24px;
 }
 
 #work h2 {
     font-size: 2.3rem;
-    margin: 0;
-    margin-bottom: 0.5em;
-    text-decoration: underline;
+	margin: 0;
+	text-align: center;
 }
 
 #work a {
 	text-decoration: none;
+	color: #f3f3f3;
 }
 
-#work .v-card {
-	width: 320px;
-	height: auto;
+#work-l {
+	display: grid;
+	grid-auto-rows: 190px;
+	grid-row-gap: 24px;
 }
 
-#work-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-    grid-column-gap: 0.2em;
-    grid-row-gap: 2em;
-    margin-bottom: 4em;
+#work-r {
+	display: grid;
+	grid-auto-rows: 190px;
+	grid-row-gap: 24px;
 }
+
+.p-card {
+	height: 100%;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	border-radius: 6px;
+}
+
+.p-card:hover {
+	box-shadow: 6px 12px 5px 0px rgba(0,0,0,0.11);
+}
+
+.p-card-overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	border-radius: 6px;
+}
+
+.p-card:hover .p-card-overlay{
+	opacity: 1 !important;
+}
+
+.p-card img {
+	border-radius: 6px;
+}
+
+.p-card-i {
+	position: absolute;
+	top: 0;
+	padding: 24px 30px;
+}
+
+.p-card-i h3 {
+	margin: 0;
+	font-size: 1.6rem;
+}
+
+.p-card-desc {
+	margin: 0;
+	margin-top: 4px;
+	font-size: 1.2rem;
+}
+
+.p-card-tags {
+	margin: 0;
+	margin-top: 8px;
+	opacity: 0.75;
+}
+
 
 /* projects */ 
 .project-card {
@@ -166,7 +292,7 @@ img {
 
 @keyframes slideInFromBottom {
     0% {
-        transform: translateY(-20%);
+        transform: translateY(20%);
     }
     100% {
         transform: translateY(0);
@@ -184,5 +310,31 @@ img {
 	
 	.v-card {
 		width: 210px !important;
+	}
+}
+
+@media (max-width: 660px) {
+	#work-wrapper {
+		grid-template-columns: 320px;
+		justify-content: center;
+		grid-column-gap: 0;
+	}
+
+	#work-r {
+		margin-top: 24px;
+	}
+}
+
+@media (max-width: 380px) {
+	#work-r, #work-l {
+		grid-row-gap: 12px;
+	}
+
+	#work-r {
+		margin-top: 12px;
+	}
+
+	body {
+		padding-bottom: 0;
 	}
 }
