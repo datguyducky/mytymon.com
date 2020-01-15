@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple Start | MTymon</title>
+
+	<link rel="stylesheet" href="style.css">
+
+	<script src="/js/dm.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body id="body">
+	<div id="p-overlay">
+		<div id="p-overlay-bg" style="background-color: #ff7139"></div>
+		<img src="../img/card/simple-start.jpg">
+	</div>
+	<main>		
+		<div id="p-info">
+			<p id="p-info-tags">
+				JavaScript, WebExtensions API
+			</p>
+			<h1>Simple Start</h1>
+			<p id="p-info-date">
+				August 2019
+			</p>
+		</div>
+		<div id="p-desc">
+			<div id="night" onclick="darkMode()">🌕</div>
+
+			<div id="btn-wrapper">
+				<a href="../index.html#work" class="btn">
+					<i data-feather="arrow-left"></i>Back
+				</a>
+				<a href="https://addons.mozilla.org/en-US/firefox/addon/simple-start/" class="btn" target="_blank">
+					<i data-feather="download"></i>Download (Firefox)
+				</a>
+				<a href="https://github.com/datguysheepy/simple-start" class="btn" target="_blank">
+					<i data-feather="github"></i>View Code
+				</a>
+			</div>
+			
+			<h2>Overview</h2>
+			<p>
+				Completely free extension for Firefox, built with WebExtensions API - JavaScript, HTML and CSS.
+				It changes new tab page to speed dial.
+			</p>
+
+			<h2>Features</h2>
+			<ul>
+				<li>Dark mode.</li>
+				<li>Built-in themes.</li>
+				<li>Organize bookmarks into groups.</li>
+				<li>Bookmark any website.</li>
+				<li>Synchronization between devices.</li>
+				<li>Minimalistic look.</li>
+			</ul>
+
+			<h2>How it works</h2>
+			<p>
+				By using WebExtensions API we can get all bookmarks that're stored in specific bookmarks folder (in this case: "simplestart"). Then we just create speed dial card for every one of them and then display them on homescreen.
+			</p>
+
+			<h2>Future development</h2>
+			<ul>
+				<li>Add option to apply custom colors for background.</li>
+				<li>Right-click with options to add/delete/edit groups and bookmarks.</li>
+				<li>Make build-in tutorial for users that're using Simple Start for the first time.</li>
+				<li>More settings to customize look and feel of the whole extension.</li>
+				<li>Auto enable dark mode for night.</li>
+				<li>Even better UX/UI design.</li>
+			</ul>
+
+			<div id="p-ss">
+				<h2>Screenshots</h2>
+				<div id="p-ss-wrapper">
+					<img src="/img/project/simple-start.png" alt="Simple Start homescreen">
+					<img src="/img/project/simple-start2.png" alt="Simple Start homescreen with dark mode enabled">
+					<img src="/img/project/simple-start3.png" alt="Simple Start homescreen with blue background">
+					<img src="/img/project/simple-start4.png" alt="Create new bookmark pop-up">
+					<img src="/img/project/simple-start5.png" alt="Create new group pop-up">
+					<img src="/img/project/simple-start6.png" alt="Settings pop-up">
+				</div>
+			</div>
+		</div>
+	</main>
+
+<script>
+	feather.replace()
+</script>
+</body>
+</html>

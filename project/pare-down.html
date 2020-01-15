@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pare Down | MTymon</title>
+
+	<link rel="stylesheet" href="style.css">
+
+	<script src="/js/dm.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body id="body">
+	<div id="p-overlay">
+		<div id="p-overlay-bg" style="background-color: #1DB954"></div>
+		<img src="../img/card/pare-down.jpg" style="width: auto;">
+	</div>
+	<main>		
+		<div id="p-info">
+			<p id="p-info-tags">
+				React, Web, Backend
+			</p>
+			<h1>Pare Down for Spotify</h1>
+			<p id="p-info-date">
+				November 2019
+			</p>
+		</div>
+		<div id="p-desc">
+			<div id="night" onclick="darkMode()">🌕</div>
+			
+			<div id="btn-wrapper">
+				<a href="../index.html#work" class="btn">
+					<i data-feather="arrow-left"></i>Back
+				</a>
+				<a href="https://pare-down.mtymon.me/" class="btn" target="_blank"> 
+					<i data-feather="globe"></i>Website
+				</a>
+				<a href="https://github.com/datguysheepy/pare-down" class="btn" target="_blank">
+					<i data-feather="github"></i>View Code
+				</a>
+			</div>
+			
+			<h2>Overview</h2>
+			<p>
+				Tool for Spotify users, built with React, Spotify API and with backend hosted on Heroku.
+			</p>
+
+			<h2>Features</h2>
+			<ul>
+				<li>Log in with Spotify.</li>
+				<li>Option to display public and private playlists of user + information about them (num. of songs, name and cover art).</li>
+				<li>Option to customize pare down process.</li>
+				<li>Duplicate user playlist with new number of songs (that user choose to).</li>
+			</ul>
+
+			<h2>How it works</h2>
+			<p>
+				After user successfully logged in with his account, we use Spotify API endpoint to GET list of all playlists of current user - then we display information about all of them (name, num. of songs, cover art) on step 1. Here user can select which playlist he want to pare down, and customize that whole process on step 2 (num. of songs, copy recently songs or the oldest ones in playlist). Then we use Spotify API endpoint to POST new playlist with: same name as that one that user selected and with proper songs that we GOT from original playlist by using Spotify API endpoint.
+			</p>
+
+			<h2>Challenges</h2>
+			<ul>
+				<li>
+					It was my first time using this type of an API, so it took me some time to fully adapt to using it. Especially when I was implementing option to sort current playlist (recently added or oldest ones) - choosing correct query parameters, then fetching and displaying correctly sorted tracks.
+				</li>
+			</ul>
+
+			<h2>Future development</h2>
+			<p>
+				I would like to redesign the whole website and add option to pare down playlists from not only Spotify, but from other music streaming services too.
+			</p>
+
+			<div id="p-ss">
+				<h2>Screenshots</h2>
+				<div id="p-ss-wrapper">
+					<img src="/img/project/pare-down.png" alt="Pare Down homescreen">
+					<img src="/img/project/pare-down2.png" alt="Pare Down step1">
+					<img src="/img/project/pare-down3.png" alt="Pare Down step2">
+					<img src="/img/project/pare-down4.png" alt="Pare Down step3">
+					<img src="/img/project/pare-down5.png" alt="Playlist was created screen.">
+				</div>
+			</div>
+		</div>
+	</main>
+
+<script>
+	feather.replace()
+</script>
+</body>
+</html>
