@@ -47,7 +47,7 @@ main h1 {
     text-transform: uppercase;
 }
 
-p.about {
+.about {
     margin: 0;
     margin-top: 4em;
     font-size: 1.3rem;
@@ -306,6 +306,36 @@ img {
 
 	#work-r {
 		margin-top: 12px;
+	}
+
+	.about {
+		text-align: center;
+		margin-top: 2.5em;
+	}
+
+	main h1 {
+		font-size: 2.9rem;
+	}
+
+	#me {
+		font-size: 1.5rem;
+	}
+
+	#contact h3 {
+		font-size: 1.3rem;
+		text-align: center;
+	}
+
+	#skills h2 {
+		font-size: 1.5rem;
+	}
+
+	#work h2 {
+		font-size: 1.5rem;
+	}
+
+	.p-card-i h3 {
+		font-size: 1.3rem;
 	}
 
 	body {
