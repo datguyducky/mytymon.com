@@ -145,8 +145,8 @@ p.about {
 }
 
 .s-card {
-	min-height: 64px;
-	min-width: 64px;
+	height: 64px;
+	width: 64px;
 	background-color: #fff;
 	border-radius: 8px;
 	cursor: pointer;

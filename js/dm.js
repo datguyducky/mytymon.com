@@ -35,7 +35,7 @@ window.onload = function() {
 			s_card[i].style.borderColor = '#444';
 		}
 
-		if(btn) {
+		if(btn.length > 0) {
 			for(let i=0; i<btn.length; i++) {
 				btn[i].style.color = '#f3f3f3';
 				btn[i].style.backgroundColor = '#444';
