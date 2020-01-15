@@ -10,18 +10,20 @@ function darkMode() {
 window.onload = function() {
     let mode = localStorage.getItem('mode');
     let body = document.getElementById('body');
-    let btn = document.getElementById('night');
+    let mode_btn = document.getElementById('night');
 	let header = document.getElementById('me');
 	let contact_a = document.getElementsByClassName('contact-a');
 	let github = document.getElementsByClassName('feather-github');
 	let s_card = document.getElementsByClassName('s-card');
+	let btn = document.getElementsByClassName('btn');
+	let feather = document.getElementsByClassName('feather');
 
     if (mode == 'dark'){
         body.style.backgroundColor = '#222';
         body.style.color = '#f3f3f3';
         
-        btn.style.backgroundColor = '#f3f3f3';
-		btn.innerHTML = '🌑';
+        mode_btn.style.backgroundColor = '#444';
+		mode_btn.innerHTML = '🌑';
 		
 		for(let i=0; i<contact_a.length; i++) {
 			contact_a[i].style.color = "#bbb";
@@ -32,8 +34,21 @@ window.onload = function() {
 			s_card[i].style.backgroundColor = '#444';
 			s_card[i].style.borderColor = '#444';
 		}
-        
-        header.style.color = '#bbb';
+
+		if(btn) {
+			for(let i=0; i<btn.length; i++) {
+				btn[i].style.color = '#f3f3f3';
+				btn[i].style.backgroundColor = '#444';
+			}
+			for(let i=0; i<feather.length; i++) {
+				feather[i].style.color = '#f3f3f3'
+			}
+		}
+		
+		//only applying style for header on index.html
+        if(header) {
+			header.style.color = '#bbb';
+		}
 
         localStorage.setItem('mode', 'dark');
     }
