@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Diceware | MTymon</title>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body id="body">
+	<div id="p-overlay">
+		<div id="p-overlay-bg" style="background-color: #999999"></div>
+		<img src="../img/card/diceware.jpg" alt="">
+	</div>
+	<main>		
+		<div id="p-info">
+			<p id="p-info-tags">
+				JavaScript, Web
+			</p>
+			<h1>Diceware Generator</h1>
+			<p id="p-info-date">
+				August 2019
+			</p>
+		</div>
+		<div id="p-desc">
+			<div id="btn-wrapper">
+				<a href="../index.html#work" class="btn">
+					<i data-feather="arrow-left"></i>Back
+				</a>
+				<a href="https://diceware.mtymon.me/" class="btn" target="_blank">
+					<i data-feather="globe"></i>Website
+				</a>
+				<a href="https://github.com/datguysheepy/diceware-generator" class="btn" target="_blank">
+					<i data-feather="github"></i>View Code
+				</a>
+			</div>
+			
+			<h2>Overview</h2>
+			<p>
+				Passphrases generator created with JavaScript. Passphrases are created by using method called <a href="http://world.std.com/~reinhold/diceware.html">Diceware</a>.
+			</p>
+
+			<h2>Features</h2>
+			<ul>
+				<li>Ability to generate passphrases in 12 languages.</li>
+				<li>Ability to select passphrase length (6-128 words).</li>
+				<li>Ability to generate new passphrase (using same settings) with just one button click.</li>
+				<li>Ability to copy generated passphrase with just one button click.</li>
+			</ul>
+
+			<h2>How it works</h2>
+			<p>
+				This website simulates throwing psychical dices (that are used in original version) 5 times. By doing that we get set of numbers which looks something like that: '11111', then we use it to get one world from World List array for language that user selected (for '11111' it's 'a' in English version) and we repeat that process as many times as selected length of passphrase to generate.
+			</p>
+
+			<div id="p-ss">
+				<h2>Screenshots</h2>
+				<div id="p-ss-wrapper">
+					<img src="/img/project/diceware.png" alt="Diceware homescreen">
+					<img src="/img/project/diceware2.png" alt="Button to generate new passphrase">
+					<img src="/img/project/diceware3.png" alt="Button to copy passphrase to clipboard">
+					<img src="/img/project/diceware4.png" alt="Diceware about screen">
+				</div>
+			</div>
+		</div>
+	</main>
+
+<script>
+	feather.replace()
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>V | MTymon</title>
+
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body id="body">
+	<div id="p-overlay">
+		<div id="p-overlay-bg" style="background-color: #0080B0"></div>
+		<img src="../img/card/v.jpg">
+	</div>
+	<main>		
+		<div id="p-info">
+			<p id="p-info-tags">
+				React Native, App, Android
+			</p>
+			<h1>V - RSS Reader</h1>
+			<p id="p-info-date">
+				January 2020
+			</p>
+		</div>
+		<div id="p-desc">
+			<div id="btn-wrapper">
+				<a href="../index.html#work" class="btn">
+					<i data-feather="arrow-left"></i>Back
+				</a>
+				<a href="https://play.google.com/store/apps/details?id=com.v" class="btn" target="_blank">
+					<i data-feather="download"></i>Download (Android)
+				</a>
+				<a href="https://github.com/datguysheepy/v-rss-reader" class="btn" target="_blank">
+					<i data-feather="github"></i>View Code
+				</a>
+			</div>
+			
+			<h2>Overview</h2>
+			<p>
+				V is a RSS reader built with React Native. Completely free to use, open source and my personal daily go-to app to read news from. Currently available to download from Google Play and Github.
+			</p>
+
+			<h2>Features</h2>
+			<ul>
+				<li>Ability to display max. 150 news from different sources at once on homescreen.</li>
+				<li>Dark mode.</li>
+				<li>Multiple themes.</li>
+				<li>Categorize RSS feeds.</li>
+				<li>Rename, enable/disable and delete RSS feeds.</li>
+				<li>Rename and delete categories.</li>
+				<li>Ads free.</li>
+				<li>Privacy safe - everything is saved locally on device.</li>
+				<li>Stats - current and best streak, first use of app and number of news opened.</li>
+			</ul>
+
+			<h2>How it works</h2>
+			<p>
+				Whole concept of V is based around RSS feeds. 
+				User can add new RSS feeds by submitting proper RSS link - then name, id and link of that feed is saved onto device (using AsyncStorage). Everytime when user visits homescreen, in background array of feeds is loaded from AsyncStorage and then every feed (that's enabled) is fetched - this gives us responses which contains informations about every news that's saved on that RSS feed (title, date published, etc.) - by using this informations we can create proper cards for news that comes from that feed.
+			</p>
+
+			<h2>Future development</h2>
+			<ul>
+				<li>Better way to manage dark mode.</li>
+				<li>Display more than 150 news at once on homescreen.</li>
+				<li>More options to customize look and feel of the whole app.</li>
+				<li>Option to rename categories.</li>
+				<li>Option to edit link for RSS feeds.</li>
+				<li>Store and display more stats.</li>
+				<li>Maybe try to encrypt user data.</li>
+			</ul>
+
+			<div id="p-ss">
+				<h2>Screenshots</h2>
+				<div id="p-ss-wrapper">
+					<img src="/img/project/v_blue.png" alt="V homescreen">
+					<img src="/img/project/v_dark.png" alt="V dark mode">
+					<img src="/img/project/v_dark2.png" alt="V settings screen with dark mode">
+					<img src="/img/project/v_blue2.png" alt="V settings screen">
+					<img src="/img/project/v_red2.png" alt="V homescreen with different theme">
+					<img src="/img/project/v_red.png" alt="V RSS feeds screen">
+				</div>
+			</div>
+		</div>
+	</main>
+
+<script>
+	feather.replace()
+</script>
+</body>
+</html>
