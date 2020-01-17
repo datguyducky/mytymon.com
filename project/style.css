@@ -5,31 +5,29 @@ body {
     margin: 0;
     background-color: #f3f3f3;
     font-family: 'Space Mono', monospace; /* space :) */
-    color: #333;
+	color: #333;
 }
 
 main {
     margin: 0 auto;
-    width: 710px;
+	width: 710px;
 	position: relative;
 	margin-bottom: 24px;
 }
 
 #night {
-    position: absolute;
-    right: 0px;
-    top: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
+    border-radius: 8px;
     background-color: #333;
     font-weight: bold;
     color: #f3f3f3;
-    height: 36px;
-    font-size: 24px;
-    width: 36px;
-    cursor: pointer;
+    height: 28px;
+	font-size: 16px;
+	line-height: 16px;
+    width: 28px;
+	cursor: pointer;
 }
 
 #p-overlay {
@@ -88,6 +86,7 @@ main {
 	margin: 32px 0;
 	display: flex;
 	color: #111;
+	position: relative;
 }
 
 .btn {
@@ -181,17 +180,27 @@ main {
 
 @media (max-width: 660px) {
 	#btn-wrapper {
-		flex-direction: column;
+		margin-top: 24px;
+		margin-bottom: 16px;
 	}
 
-	.btn {
-		margin-right: 0;
-		width: 210px;
-		padding: 4px 10px;
-		margin-bottom: 12px;
+	.btn span {
+		display: none;
 	}
 
-	.btn:last-child {
-		margin-bottom: 0;
+	#p-desc p {
+		margin-bottom: 16px;
+	}
+
+	#p-ss {
+		margin-top: 24px;
+	}
+
+	#night {
+		width: 20px;
+		height: 20px;
+		border-radius: 5px;
+		font-size: 12px;
+		line-height: 12px;
 	}
 }
