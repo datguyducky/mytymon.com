@@ -13,7 +13,6 @@ window.onload = function() {
     let mode_btn = document.getElementById('night');
 	let header = document.getElementById('me');
 	let contact_a = document.getElementsByClassName('contact-a');
-	let github = document.getElementsByClassName('feather-github');
 	let s_card = document.getElementsByClassName('s-card');
 	let btn = document.getElementsByClassName('btn');
 	let feather = document.getElementsByClassName('feather');
@@ -28,7 +27,6 @@ window.onload = function() {
 		for(let i=0; i<contact_a.length; i++) {
 			contact_a[i].style.color = "#bbb";
 		}
-		github[0].style.color='#f3f3f3'
 
 		for(let i=0; i<s_card.length; i++) {
 			s_card[i].style.backgroundColor = '#444';
