@@ -12,7 +12,7 @@
 </head>
 <body id="body">
 	<div id="p-overlay">
-		<div id="p-overlay-bg" style="background-color: #1DB954"></div>
+		<div id="p-overlay-bg" style="background-color: #252633"></div>
 		<img src="../img/card/pare-down.jpg" style="width: auto;">
 	</div>
 	<main>		
@@ -52,35 +52,41 @@
 			<ul>
 				<li>Log in with Spotify.</li>
 				<li>Option to display public and private playlists of user + information about them (num. of songs, name and cover art).</li>
-				<li>Option to customize pare down process.</li>
-				<li>Duplicate user playlist with new number of songs (that user choose to).</li>
+				<li>Display 100 songs (sorted by latest or oldest) in playlist.</li>
+				<li>Duplicate playlists with new number of songs, edit their title and description.</li>
+				<li>Deleting playlist from library with one button click.</li>
 			</ul>
 
 			<h2>How it works</h2>
 			<p>
-				After user successfully logged in with his account, we use Spotify API endpoint to GET list of all playlists of current user - then we display information about all of them (name, num. of songs, cover art) on step 1. Here user can select which playlist he want to pare down, and customize that whole process on step 2 (num. of songs, copy recently songs or the oldest ones in playlist). Then we use Spotify API endpoint to POST new playlist with: same name as that one that user selected and with proper songs that we GOT from original playlist by using Spotify API endpoint.
+				After user successfully logged in with his account, we use Spotify API endpoint to GET list of all playlists of a current user and then we display information about all of them (name, num. of songs, cover art). By clicking on cover of a playlists we're redirect to subpage where more informations about that playlist are displayed + 100 (oldest or latest) songs from that playlist are displayed on that page too. By clicking 'Pare Down' button pop-up shows up where we can set up whole process of Pare Down - name of new playlist, description, privacy setting and number of songs. By clicking big and blue 'Pare Down' button on last step - new and pared down version of that playlist is created (by sending POST to Spotify API playlists endpoint).
 			</p>
 
 			<h2>Challenges</h2>
 			<ul>
 				<li>
 					It was my first time using this type of an API, so it took me some time to fully adapt to using it. Especially when I was implementing option to sort current playlist (recently added or oldest ones) - choosing correct query parameters, then fetching and displaying correctly sorted tracks.
+
+					When a few months passed after the creation of this project I decided to redesign the whole webpage of it. So learning more about proper design concepts, colors and all of that was quite a challenge. Also with redesign I wanted to use React Router so that was also something new for me.
 				</li>
 			</ul>
 
 			<h2>Future development</h2>
 			<p>
-				I would like to redesign the whole website and add option to pare down playlists from not only Spotify, but from other music streaming services too.
+				<s>I would like to redesign the whole website</s> Now, when redesign is done I would like to add suport for my music streaming services (Apple Music and Deezer at first).
+				On top of that I would like to add 'premier calendar' functionality to this project.
 			</p>
 
 			<div id="p-ss">
 				<h2>Screenshots</h2>
 				<div id="p-ss-wrapper">
-					<img src="/img/project/pare-down.png" alt="Pare Down homescreen">
-					<img src="/img/project/pare-down2.png" alt="Pare Down step1">
-					<img src="/img/project/pare-down3.png" alt="Pare Down step2">
-					<img src="/img/project/pare-down4.png" alt="Pare Down step3">
-					<img src="/img/project/pare-down5.png" alt="Playlist was created screen.">
+					<img src="/img/project/new_pare-down.png" alt="Pare Down homescreen">
+					<img src="/img/project/new_pare-down2.png" alt="Pare Down homescreen pricing and features section">
+					<img src="/img/project/new_pare-down3.png" alt="Pare Down playlists dashboard">
+					<img src="/img/project/new_pare-down4.png" alt="Pare Down playlist view">
+					<img src="/img/project/new_pare-down5.png" alt="Pare Down pop-up - step1">
+					<img src="/img/project/new_pare-down6.png" alt="Pare Down pop-up - step2">
+					<img src="/img/project/new_pare-down7.png" alt="Cancel pop-up">
 				</div>
 			</div>
 		</div>
