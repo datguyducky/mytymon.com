@@ -189,7 +189,8 @@ main h1 {
 #work-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 24px;
+	grid-auto-rows: 186px;
+	grid-gap: 24px;
 	margin-bottom: 24px;
 }
 
@@ -289,25 +290,12 @@ img {
 		justify-content: center;
 		grid-column-gap: 0;
 	}
-
-	#work-r {
-		margin-top: 24px;
-	}
 }
 
 @media (max-width: 380px) {
 	#night {
 		font-size: 18px;
 		line-height: 18px;
-	}
-
-	#work-r, #work-l {
-		grid-row-gap: 12px;
-		grid-auto-rows: 150px;
-	}
-
-	#work-r {
-		margin-top: 12px;
 	}
 
 	.about {

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>inbundle.games | MTymon</title>
+
+	<link rel="stylesheet" href="style.css">
+	
+	<script src="/js/dm.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+</head>
+<body id="body">
+	<div id="p-overlay">
+		<div id="p-overlay-bg" style="background-color: #111; opacity: 0.85;"></div>
+		<div id='p-overlay-img' style="background-image: url('../img/card/inbundle.jpg');"></div>
+	</div>
+	<main>
+		<div id="p-info">
+			<p id="p-info-tags">
+				React, PostgreSQL, Node.js, Backend, Web
+			</p>
+			<h1>inbundle.games</h1>
+			<p id="p-info-date">
+				May 2020
+			</p>
+		</div>
+		<div id="p-desc">
+			<div id="btn-wrapper">
+				<a href="../index.html#work" class="btn">
+					<i data-feather="arrow-left"></i>
+					<span>Back</span>
+				</a>
+				<a href="https://inbundle.games/" class="btn">
+					<i data-feather="globe"></i>
+					<span>Website</span>
+				</a>
+				<a href="https://github.com/datguysheepy/inbundle.games" class="btn">
+					<i data-feather="code"></i>
+					<span>View Code</span>
+				</a>
+
+				<div id="night" onclick="darkMode()">🌕</div>
+			</div>
+			
+			<h2>Overview</h2>
+			<p>
+				Simple and fast tool to check if game was ever in a bundle at humblebundle.com.
+				Created with React and PostgreSQL database + Node.js backend hosted on Heroku.
+			</p>
+
+			<h2>How it works</h2>
+			<p>
+				After entering the game title and pressing the enter button, the user is taken to the view with all games with similar titles - here we use <a href="https://rawg.io/apidocs">RAWG API</a>.
+
+				Then, after pressing the mouse button on any game, the user is taken to the view with details about it. Where, behind the scenes, we send two fetches:
+				<ul>
+					<li>
+						First to RAWG API to get screenshots and more details about this game.
+					</li>
+					<li>
+						And last to our backend - where with Node.js we search through the database for a game with the tittle we passed. If it is in the database, we return all its occurrences in it and by using the relationships we also return information about the bundles in which the game appeared.
+					</li>
+				</ul>
+			</p>
+
+			<div id="p-ss">
+				<h2>Screenshots</h2>
+				<div id="p-ss-wrapper">
+					<img src="/img/project/inbundle.png" alt="inbundle.games home view">
+					<img src="/img/project/inbundle2.png" alt="inbundle.games search view">
+					<img src="/img/project/inbundle3.png" alt="inbundle.games game details view">
+				</div>
+			</div>
+		</div>
+	</main>
+
+<script>
+	feather.replace()
+</script>
+</body>
+</html>

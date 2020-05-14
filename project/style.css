@@ -45,9 +45,11 @@ main {
 	justify-content: center;
 }
 
-#p-overlay img {
+#p-overlay-img {
 	width: 100%;
-	height: 140%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 #p-overlay-bg {
