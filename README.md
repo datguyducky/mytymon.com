@@ -9,5 +9,3 @@ This repository is for my portfolio website that's hosted on Github Pages. Below
 - [Simple Start - Extension for Firefox](https://github.com/datguysheepy/simple-start "Simple Start")
 - [Pare Down for Spotify](https://github.com/datguysheepy/pare-down "Pare Down for Spotify")
 - [Diceware Generator](https://github.com/datguysheepy/diceware-generator "Diceware Generator")
-- [Blog365](https://github.com/datguysheepy/mtymon.me/tree/master/blog365 "Blog365")
-- [Simple Start - Homepage](https://github.com/datguysheepy/simple-start-homepage "Simple Start - Homepage")

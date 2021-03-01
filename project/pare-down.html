@@ -18,7 +18,7 @@
 	<main>		
 		<div id="p-info">
 			<p id="p-info-tags">
-				React, Web, Backend
+				React, Web, REST API, NextJS, TailwindCSS
 			</p>
 			<h1>Pare Down for Spotify</h1>
 			<p id="p-info-date">
@@ -45,48 +45,55 @@
 			
 			<h2>Overview</h2>
 			<p>
-				Tool for Spotify users, built with React, Spotify API and with backend hosted on Heroku.
+				Tool for Spotify users, built with React + Typescript,NextJS and Spotify API. With styling done by TailwindCSS and styled-components.
 			</p>
 
 			<h2>Features</h2>
 			<ul>
 				<li>Log in with Spotify.</li>
-				<li>Option to display public and private playlists of user + information about them (num. of songs, name and cover art).</li>
-				<li>Display 100 songs (sorted by latest or oldest) in playlist.</li>
-				<li>Duplicate playlists with new number of songs, edit their title and description.</li>
+				<li>Display grid of public, private and collaborative playlists on grid.</li>
+				<li>Playlist details view - name, description, etc. and with a table of 25 lastly added songs to the playlist.</li>
+				<li>Create pared down version of playlist. With new number of songs choosen by user, new name and description.</li>
+				<li>Modal to edit playlist details.</li>
 				<li>Deleting playlist from library with one button click.</li>
 			</ul>
 
 			<h2>How it works</h2>
 			<p>
-				After user successfully logged in with his account, we use Spotify API endpoint to GET list of all playlists of a current user and then we display information about all of them (name, num. of songs, cover art). By clicking on cover of a playlists we're redirect to subpage where more informations about that playlist are displayed + 100 (oldest or latest) songs from that playlist are displayed on that page too. By clicking 'Pare Down' button pop-up shows up where we can set up whole process of Pare Down - name of new playlist, description, privacy setting and number of songs. By clicking big and blue 'Pare Down' button on last step - new and pared down version of that playlist is created (by sending POST to Spotify API playlists endpoint).
+				We use NextJS api routes to create our middleware REST API between our frontend and Spotify API. We use that API to retrieve private and public playlists of a user (that then are displayed on the frontend), and also to edit, delete and create new playlists for the user.
 			</p>
 
 			<h2>Challenges</h2>
 			<ul>
 				<li>
 					It was my first time using this type of an API, so it took me some time to fully adapt to using it. Especially when I was implementing option to sort current playlist (recently added or oldest ones) - choosing correct query parameters, then fetching and displaying correctly sorted tracks.
-
+				</li>
+				<li>
 					When a few months passed after the creation of this project I decided to redesign the whole webpage of it. So learning more about proper design concepts, colors and all of that was quite a challenge. Also with redesign I wanted to use React Router so that was also something new for me.
+				</li>
+				<li>
+					Then the next redesign came, but this time we didn't only focused on the UI/UX of the app, but also on the technologies used behind the scenes. Basically the whole app was redesigned from the ground up (both the UX/UI and code for both frontend and backend), this time we used ReactJS with Typescript, with a help of NextJS and with UX/UI created by TailwindCSS and styled-components. This version of the app is the one that I'm really happy with.
 				</li>
 			</ul>
 
 			<h2>Future development</h2>
 			<p>
-				<s>I would like to redesign the whole website</s> Now, when redesign is done I would like to add suport for my music streaming services (Apple Music and Deezer at first).
-				On top of that I would like to add 'premier calendar' functionality to this project.
+				<s>I would like to redesign the whole website</s> <s>Now, when redesign is done I would like to add suport for my music streaming services (Apple Music and Deezer at first).
+				On top of that I would like to add 'premier calendar' functionality to this project</s>.
+			</p>
+			<p>
+				I'm happy both with the code and the UX/UI of the app but there's always a place for some improvements, so I'm sure that this is not a final version of Pare Down.
 			</p>
 
 			<div id="p-ss">
 				<h2>Screenshots</h2>
 				<div id="p-ss-wrapper">
-					<img src="/img/project/new_pare-down.png" alt="Pare Down homescreen">
-					<img src="/img/project/new_pare-down2.png" alt="Pare Down homescreen pricing and features section">
-					<img src="/img/project/new_pare-down3.png" alt="Pare Down playlists dashboard">
-					<img src="/img/project/new_pare-down4.png" alt="Pare Down playlist view">
-					<img src="/img/project/new_pare-down5.png" alt="Pare Down pop-up - step1">
-					<img src="/img/project/new_pare-down6.png" alt="Pare Down pop-up - step2">
-					<img src="/img/project/new_pare-down7.png" alt="Cancel pop-up">
+					<img src="/img/project/paredown_redesignV2-1.png" alt="Pare Down homescreen">
+					<img src="/img/project/paredown_redesignV2-2.png" alt="Pare Down homescreen pricing and features section">
+					<img src="/img/project/paredown_redesignV2-3.png" alt="Pare Down playlists dashboard">
+					<img src="/img/project/paredown_redesignV2-4.png" alt="Pare Down playlist details view">
+					<img src="/img/project/paredown_redesignV2-5.png" alt="Pare Down modal - step 1">
+					<img src="/img/project/paredown_redesignV2-6.png" alt="Edit playlist details modal">
 				</div>
 			</div>
 		</div>
