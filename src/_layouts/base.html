@@ -1,0 +1,36 @@
+---
+title: 'Tymon Myslinski'
+withHeader: true
+---
+
+<html lang="en">
+	<head>
+		<!-- charset/http-equiv/viewport -->
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>{{ title }}</title>
+
+		<link rel="stylesheet" href="/src/css/style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="root">
+			<section class="navigation layout">
+				{% if withHeader %}
+				<span>@datguyducky</span>
+				{% endif %}
+
+				<div class="theme-icon-wrapper button-base button-square-small">D</div>
+			</section>
+
+			<div class="container">{{ content | safe }}</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"plugins": ["@html-eslint", "html", "css", "jsx-a11y"],
+	"extends": ["eslint:recommended", "plugin:css/recommended", "plugin:@html-eslint/recommended", "plugin:jsx-a11y/recommended"],
+	"overrides": [
+		{
+			"files": ["*.html"],
+			"parser": "@html-eslint/parser",
+			"extends": ["plugin:@html-eslint/recommended"]
+		}
+	],
+	"rules": {
+		"@html-eslint/indent": ["off", "tab"],
+		"@html-eslint/require-closing-tags": ["error", { "selfClosing": "always" }],
+		"@html-eslint/require-doctype": "off",
+		"@html-eslint/no-extra-spacing-attrs": ["error", { "enforceBeforeSelfClose": true }]
+	}
+}
