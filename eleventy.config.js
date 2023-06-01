@@ -9,6 +9,7 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({
 		'src/assets/css/*.css': 'css/',
 	});
+	eleventyConfig.addPassthroughCopy({ 'src/assets/js': 'js/' });
 
 	// ---------- Markdown extra options ----------
 	let markdownItOptions = {
