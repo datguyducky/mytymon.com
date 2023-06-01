@@ -4,13 +4,10 @@ const markdownItAttrs = require('markdown-it-attrs');
 const { formatDate } = require('./11ty/filters/index.js');
 
 module.exports = function (eleventyConfig) {
-	// ---------- Custom watch targets ----------
-	eleventyConfig.addWatchTarget('./src/assets');
-
 	// ---------- Passthrough file copy ----------
-	eleventyConfig.addPassthroughCopy('src/assets/images/');
+	eleventyConfig.addPassthroughCopy({ 'src/assets/images/': 'public/' });
 	eleventyConfig.addPassthroughCopy({
-		'src/assets/css/style.css': 'src/css/style.css',
+		'src/assets/css/*.css': 'css/',
 	});
 
 	// ---------- Markdown extra options ----------
@@ -34,6 +31,20 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addCollection('featuredProjects', function (collectionApi) {
 		return collectionApi.getFilteredByTag('featured');
+	});
+
+	eleventyConfig.addCollection('postsByYear', collectionApi => {
+		const posts = collectionApi.getFilteredByGlob('src/posts/*.md').reverse();
+		const years = posts.map(post => post.date.getFullYear());
+		const uniqueYears = [...new Set(years)];
+
+		const postsByYear = uniqueYears.reduce((prev, year) => {
+			const filteredPosts = posts.filter(post => post.date.getFullYear() === year);
+
+			return [...prev, [year, filteredPosts]];
+		}, []);
+
+		return postsByYear;
 	});
 
 	// 	----------  Custom filters ----------

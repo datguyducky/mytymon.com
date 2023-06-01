@@ -25,16 +25,18 @@ h5,
 h6 {
 	margin: 0;
 	padding: 0;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 h1 {
 	font-size: 32px;
 	line-height: 30px;
+	font-weight: 700;
 }
 
 h2 {
 	font-size: 24px;
+	margin-top: 32px;
 }
 
 a {
@@ -54,6 +56,11 @@ a {
 .navigation {
 	display: flex;
 	margin: 32px auto 0;
+	align-items: center;
+}
+
+.navigation-header {
+	font-weight: 600;
 }
 
 .theme-icon-wrapper {
@@ -62,12 +69,17 @@ a {
 
 .layout {
 	max-width: 928px;
+	width: 100%;
 }
 
 .heading-with-button {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.heading-with-button h2 {
+	margin: 0;
 }
 
 .button-base {
@@ -127,26 +139,31 @@ a {
 	margin-top: 64px;
 }
 
+.posts-list {
+	list-style: none;
+	margin-top: 8px;
+}
+
 .simple-posts-list {
 	list-style: none;
 	margin-top: 32px;
 }
 
-.simple-posts-list-item {
+.posts-list-item {
 	color: inherit;
 	font-weight: 600;
 	padding: 8px 0;
 	border-bottom: 1px solid #dee2e6;
 }
 
-.simple-posts-list-item a {
+.posts-list-item a {
 	color: inherit;
 	text-decoration: none;
 	display: flex;
 	justify-content: space-between;
 }
 
-.simple-post-list-date {
+.posts-list-item-date {
 	font-size: 14px;
 	color: #74c0fc;
 	font-weight: 400;
@@ -195,4 +212,11 @@ a {
 	margin-top: 24px;
 	display: flex;
 	column-gap: 16px;
+}
+
+.button-icon {
+	height: 16px;
+	width: 16px;
+	color: #000;
+	margin-right: 8px;
 }

@@ -1,0 +1,90 @@
+---
+layout: base.html
+withHeader: true
+withButtons: false
+---
+
+<html lang="en">
+	<head>
+		<link rel="stylesheet" href="/css/post.css" />
+	</head>
+	<body>
+		<div class="layout post-layout">
+			<div class="post-heading-wrap">
+				{% if withButtons %}
+				<div class="post-heading-button-wrap">
+					<a class="button-base button-small-highlight" id="back-button">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="button-icon"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M7.793 2.232a.75.75 0 01-.025 1.06L3.622 7.25h10.003a5.375 5.375 0 010 10.75H10.75a.75.75 0 010-1.5h2.875a3.875 3.875 0 000-7.75H3.622l4.146 3.957a.75.75 0 01-1.036 1.085l-5.5-5.25a.75.75 0 010-1.085l5.5-5.25a.75.75 0 011.06.025z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+						Back
+					</a>
+
+					{% if websiteUrl %}
+					<a class="button-base button-small-highlight" href="{{ websiteUrl }}">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="button-icon"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
+								clip-rule="evenodd"
+							/>
+							<path
+								fill-rule="evenodd"
+								d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+						Website
+					</a>
+					{% endif %} {% if sourceUrl %}
+					<a class="button-base button-small-highlight" href="{{ sourceUrl }}">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="button-icon"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M6.28 5.22a.75.75 0 010 1.06L2.56 10l3.72 3.72a.75.75 0 01-1.06 1.06L.97 10.53a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 0zm7.44 0a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L17.44 10l-3.72-3.72a.75.75 0 010-1.06zM11.377 2.011a.75.75 0 01.612.867l-2.5 14.5a.75.75 0 01-1.478-.255l2.5-14.5a.75.75 0 01.866-.612z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+						Code
+					</a>
+					{% endif %}
+				</div>
+				{% endif %}
+
+				<h1>{{ title }}</h1>
+			</div>
+			{{ content | safe }}
+		</div>
+
+		<script>
+			const backElement = document.getElementById('back-button');
+
+			if (backElement) {
+				backElement.setAttribute('href', document.referrer);
+				backElement.onclick = function () {
+					history.back();
+					return false;
+				};
+			}
+		</script>
+	</body>
+</html>

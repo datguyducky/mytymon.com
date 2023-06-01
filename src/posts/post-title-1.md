@@ -2,7 +2,6 @@
 title: My First Post
 date: 2020-05-01
 description: This is my first blog post.
-layout: base.html
 ---
 
 This is the content of my first blog post.

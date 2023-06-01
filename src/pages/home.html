@@ -35,15 +35,15 @@ layout: 'home.html'
 		<div class="heading-with-button">
 			<h2>Latest Posts</h2>
 
-			<button class="button-base">View all</button>
+			<a href="/posts" class="button-base">View all</a>
 		</div>
 
 		<ul class="simple-posts-list">
 			{% for post in collections.posts | reverse %} {% if loop.index <= 6 %}
-			<li class="simple-posts-list-item">
+			<li class="posts-list-item">
 				<a href="{{ post.url }}">
 					<span>{{ post.data.title }}</span>
-					<span class="simple-post-list-date"> {{ post.date | formatDate('DD MMMM, YYYY') }} </span>
+					<span class="posts-list-item-date"> {{ post.date | formatDate('DD MMMM, YYYY') }} </span>
 				</a>
 			</li>
 			{% endif %} {% endfor %}
@@ -54,7 +54,7 @@ layout: 'home.html'
 		<div class="heading-with-button">
 			<h2>Projects</h2>
 
-			<button class="button-base">View all</button>
+			<a href="/projects" class="button-base">View all</a>
 		</div>
 
 		<div class="short-projects-list">
