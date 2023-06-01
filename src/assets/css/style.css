@@ -103,13 +103,27 @@ a {
 	width: 32px;
 }
 
+.button-base:hover,
+.button-base:focus {
+	border-color: var(--color-text);
+}
+
+.text-link {
+	cursor: pointer;
+}
+
+.text-link:hover,
+.text-link :focus {
+	text-decoration: underline;
+}
+
 .button-small-highlight {
 	padding: 6px 12px;
 	font-size: 14px;
 }
 
 .text-primary {
-	color: var(--color-primary );
+	color: var(--color-primary);
 	font-weight: 600;
 }
 
@@ -156,6 +170,11 @@ a {
 	border-bottom: 1px solid var(--color-border);
 }
 
+.posts-list-item:last-of-type {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
 .posts-list-item a {
 	color: inherit;
 	text-decoration: none;
@@ -168,6 +187,7 @@ a {
 	color: var(--color-primary);
 	font-weight: 400;
 	font-family: 'IBM Plex Mono', monospace;
+	text-decoration: none !important;
 }
 
 .projects-section {
@@ -224,6 +244,6 @@ a {
 .button-icon {
 	height: 16px;
 	width: 16px;
-	color: #000;
+	color: var(--color-text);
 	margin-right: 8px;
 }

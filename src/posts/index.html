@@ -13,7 +13,7 @@ layout: base.html
 		{% for post in yearPosts | reverse %}
 		<li class="posts-list-item">
 			<a href="{{ post.url }}">
-				<span>{{ post.data.title }}</span>
+				<span class="text-link">{{ post.data.title }}</span>
 				<span class="posts-list-item-date"> {{ post.date | formatDate('DD MMMM, YYYY') }} </span>
 			</a>
 		</li>

@@ -23,8 +23,8 @@ layout: 'home.html'
 				consectetur.
 				<br />
 				<br />
-				Ut id <span class="text-primary">iaculis</span> libero. Sed rhoncus quis ex id proin elementum dignissim
-				nisl, a posuere nibh laoreet id.
+				Ut id <a class="text-primary text-link">iaculis</a> libero. Sed rhoncus quis ex id proin elementum
+				dignissim nisl, a posuere nibh laoreet id.
 			</p>
 
 			<div style="background-color: yellow; width: 100%; height: 212px" />
@@ -71,7 +71,7 @@ layout: 'home.html'
 			{% for post in collections.posts | reverse %} {% if loop.index <= 6 %}
 			<li class="posts-list-item">
 				<a href="{{ post.url }}">
-					<span>{{ post.data.title }}</span>
+					<span class="text-link">{{ post.data.title }}</span>
 					<span class="posts-list-item-date"> {{ post.date | formatDate('DD MMMM, YYYY') }} </span>
 				</a>
 			</li>
