@@ -39,7 +39,7 @@ layout: 'home.html'
 		</div>
 
 		<div class="short-projects-list">
-			{% for project in collections.featuredProjects %}
+			{% for project in collections.featuredProjects | reverse %}
 			<div class="project-card">
 				<p class="project-card-year">{{project.date | formatDate('YYYY')}}</p>
 				<p class="project-card-title">{{ project.data.title }}</p>

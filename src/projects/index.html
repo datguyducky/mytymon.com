@@ -6,9 +6,9 @@ layout: base.html
 
 <div class="layout">
 	<h1 class="intro-heading">Projects</h1>
-	
+
 	<div class="projects-list">
-		{% for project in collections.projects %}
+		{% for project in collections.projects | reverse %}
 		<div class="project-card">
 			<p class="project-card-year">{{project.date | formatDate('YYYY')}}</p>
 			<p class="project-card-title">{{ project.data.title }}</p>
@@ -20,8 +20,7 @@ layout: base.html
 
 				{% if project.data.websiteUrl %}
 				<a class="button-base button-small-highlight" href="{{ project.data.websiteUrl }}">Website</a>
-				{% endif %}
-				{% if project.data.sourceUrl %}
+				{% endif %} {% if project.data.sourceUrl %}
 				<a class="button-base button-small-highlight" href="{{ project.data.sourceUrl }}">Code</a>
 				{% endif %}
 			</div>
