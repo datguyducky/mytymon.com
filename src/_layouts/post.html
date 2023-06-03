@@ -11,6 +11,8 @@ withButtons: false
 	<body>
 		<div class="layout post-layout">
 			<div class="post-heading-wrap">
+				<h1>{{ title }}</h1>
+
 				{% if withButtons %}
 				<div class="post-heading-button-wrap">
 					<a class="button-base button-small-highlight" id="back-button">
@@ -69,8 +71,6 @@ withButtons: false
 					{% endif %}
 				</div>
 				{% endif %}
-
-				<h1>{{ title }}</h1>
 			</div>
 			{{ content | safe }}
 		</div>
