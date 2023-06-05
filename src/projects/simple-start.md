@@ -29,8 +29,6 @@ Since I use this project on a daily basis, I chose it to serve as my 'playground
 - Comments - better structured and used more frequently.
 - To test new tools that I've learned in last two years: Vite and Mantine.
 - Minimize the usage of npm dependencies as much as possible.
-<br />
-<br />
 
 Please note that as I write this article some time after the redesign, I do not recall the specific challenges and thoughts I encountered during the process. However, here is the current appearance of the project:
 
