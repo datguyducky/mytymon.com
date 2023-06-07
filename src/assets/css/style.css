@@ -145,7 +145,7 @@ a {
 .intro-wrapper {
 	display: grid;
 	gap: 96px;
-	grid-template-columns: 1fr 210px;
+	grid-template-columns: 1fr 264px;
 	margin-top: 32px;
 }
 
@@ -254,4 +254,8 @@ a {
 	width: 16px;
 	color: var(--color-text);
 	margin-right: 8px;
+}
+
+#duck-sunny {
+	display: none;
 }
