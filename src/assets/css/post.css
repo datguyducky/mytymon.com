@@ -20,6 +20,7 @@ ul {
 
 img {
 	margin: 0 auto;
+	max-width: 100%;
 }
 
 .post-layout {
@@ -44,4 +45,12 @@ img.img-border {
 
 .p-flex {
 	display: flex;
+}
+
+@media screen and (max-width: 434px) {
+	.post-heading-button-wrap {
+		margin-top: 16px;
+		flex-direction: column;
+		row-gap: 8px;
+	}
 }

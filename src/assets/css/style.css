@@ -49,6 +49,11 @@ a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 0 32px;
+}
+
+.layout {
+	max-width: 1110px;
 	width: 100%;
 }
 
@@ -56,6 +61,8 @@ a {
 	display: flex;
 	margin: 32px auto 0;
 	align-items: center;
+	padding: 0 32px;
+	width: auto;
 }
 
 .navigation-header {
@@ -65,11 +72,6 @@ a {
 .theme-icon-wrapper {
 	margin-left: auto;
 	box-sizing: content-box;
-}
-
-.layout {
-	max-width: 928px;
-	width: 100%;
 }
 
 .heading-with-button {
@@ -95,6 +97,7 @@ a {
 	align-items: center;
 	cursor: pointer;
 	font-family: 'IBM Plex Mono', monospace;
+	text-align: center;
 }
 
 .button-square-small {
@@ -144,9 +147,14 @@ a {
 
 .intro-wrapper {
 	display: grid;
-	gap: 96px;
+	gap: 128px;
 	grid-template-columns: 1fr 264px;
 	margin-top: 32px;
+}
+
+.intro-wrapper img {
+	width: 100%;
+	align-self: center;
 }
 
 .blog-section {
@@ -194,7 +202,7 @@ a {
 	margin-top: 64px;
 }
 
-.short-projects-list {
+.featured-projects-list {
 	margin-top: 32px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -214,9 +222,11 @@ a {
 	background-color: var(--color-background-shade);
 	border-radius: 6px;
 	padding: 16px;
-	height: 152px;
+	height: 168px;
 	overflow: hidden;
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
 }
 
 .project-card p {
@@ -237,16 +247,17 @@ a {
 	margin-top: 8px;
 	font-size: 14px;
 	color: var(--color-text-subtle);
-	height: 18px;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	white-space: nowrap;
 }
 
 .project-card-buttons {
-	margin-top: 24px;
+	margin-top: auto;
 	display: flex;
-	column-gap: 12px;
+	column-gap: 8px;
 }
 
 .button-icon {
@@ -258,4 +269,50 @@ a {
 
 #duck-sunny {
 	display: none;
+}
+
+@media screen and (max-width: 1180px) {
+	.projects-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.featured-projects-list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 16px;
+	}
+}
+
+@media screen and (max-width: 805px) {
+	.projects-list {
+		display: flex;
+		flex-direction: column;
+		row-gap: 16px;
+	}
+}
+
+@media screen and (max-width: 756px) {
+	.intro-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.intro-wrapper img {
+		height: 256px;
+	}
+}
+
+@media screen and (max-width: 434px) {
+	.project-card {
+		height: auto;
+	}
+
+	.project-card-buttons {
+		margin-top: 16px;
+		flex-direction: column;
+		row-gap: 8px;
+	}
 }

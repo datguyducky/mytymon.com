@@ -42,7 +42,7 @@ layout: 'home.html'
 			<a href="/projects" class="button-base">View all</a>
 		</div>
 
-		<div class="short-projects-list">
+		<div class="featured-projects-list">
 			{% for project in collections.featuredProjects | reverse %}
 			<div class="project-card">
 				<p class="project-card-year">{{project.date | formatDate('YYYY')}}</p>
