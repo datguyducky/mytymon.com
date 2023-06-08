@@ -13,7 +13,7 @@ During that period, Firefox didn't have a built-in new tab or home page, and the
 That's when I decided to take matters into my own hands and create one myself.
 
 ## At first...
-If I'm not mistaken, this is my second major project that I've worked on, with the first being the <a class='text-link text-primary' href='/projects/diceware-generator'>Diceware Generator</a>.
+If I'm not mistaken, this is my second major project that I've worked on, with the first being the [Diceware Generator](/projects/diceware-generator).
 The initial released version of this project clearly had room for improvement in terms of its appearance and functionality.
 
 Since I'm writing this article long after the project's creation, I don't quite recall the specific issues and thoughts I had about it back then. 

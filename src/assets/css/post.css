@@ -47,6 +47,16 @@ img.img-border {
 	display: flex;
 }
 
+a {
+	color: var(--color-primary);
+	font-weight: 600;
+}
+
+a:focus,
+a:hover {
+	text-decoration: underline;
+}
+
 @media screen and (max-width: 434px) {
 	.post-heading-button-wrap {
 		margin-top: 16px;

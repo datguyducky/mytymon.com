@@ -49,5 +49,5 @@ And this is the latest version that utilizes both Next.js and TailwindCSS. While
 </p>
 
 ## Future plans
-This is my second favorite project (after <a href="/projects/simple-start" class="text-link text-primary">Simple Start</a>) that I enjoy working on. Therefore, I am certain that more functionalities, design changes, and even complete redesigns or rewrites are coming in the future for this project. 
+This is my second favorite project (after [Simple Start](/projects/simple-start)) that I enjoy working on. Therefore, I am certain that more functionalities, design changes, and even complete redesigns or rewrites are coming in the future for this project. 
 In fact, I still have a lengthy list of things that I believe can be improved here.

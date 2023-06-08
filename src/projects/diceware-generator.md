@@ -6,10 +6,12 @@ tags: ['JavaScript', 'Web']
 websiteUrl: https://diceware.mtymon.me/
 sourceUrl: https://github.com/datguysheepy/diceware-generator
 ---
+
+## Overview
 This is the first real project I've ever created using JavaScript, so both the code and design leave much to be desired. However, to this day, I'm happy with it, and I'm glad I made the decision to create it.
 
 The idea for this project came to me when I read an article about using physical dice to generate highly secure passwords for online accounts. 
-Being the lazy person that I am, I decided to reproduce it digitally for a faster and easier user experience. If you're interested in learning more about this method, you can find more in <a href="https://theworld.com/~reinhold/diceware.html" class="text-link text-primary">this article</a>.
+Being the lazy person that I am, I decided to reproduce it digitally for a faster and easier user experience. If you're interested in learning more about this method, you can find more in [this article](https://theworld.com/~reinhold/diceware.html).
 
 ## Features
 This is a relatively simple project that offers several key features:

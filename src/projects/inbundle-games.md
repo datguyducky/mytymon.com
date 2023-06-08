@@ -7,7 +7,7 @@ sourceUrl: https://github.com/datguysheepy/inbundle.games
 ---
 Please keep in mind that this project is no longer supported or maintained. Therefore, it is highly likely that any links associated with it may no longer be active.
 
-I am a big fan of <a href="https://humblebundle.com/" class="text-link text-primary">Humble Bundle</a>, not only because it allows me to discover and enjoy great games but also because it enables me to support others.
+I am a big fan of [Humble Bundle](https://humblebundle.com/), not only because it allows me to discover and enjoy great games but also because it enables me to support others.
 Given that this initiative began back in 2010, the number of games bundled over the years has been substantial. If you have been following Humble Bundle for some time, you may have noticed that certain games were occasionally repeated.
 To address this, I created inbundle.games - a simple web tool to quickly check if a game was ever part of a Humble Bundle and when it was featured."
 
@@ -19,7 +19,7 @@ I needed this app to perform two simple tasks:
 
 As you can see, the requirements were not overly complex. To accomplish these tasks, I recognized the need for a database. Given my previous experience with it, I chose PostgreSQL for the job.
 However, I was well aware that manually adding and maintaining every possible game in my own database would be an impractical endeavor. That's why I opted to utilize an existing third-party API for this purpose.
-After careful consideration, I selected the <a href="https://rawg.io/apidocs" class="text-primary text-link">RAWG API</a> as it appeared to be a reliable and comprehensive service, and best of all, it offered free usage.
+After careful consideration, I selected the [RAWG API](https://rawg.io/apidocs) as it appeared to be a reliable and comprehensive service, and best of all, it offered free usage.
 
 ## The app
 As described in the section before, this app don't do much:
