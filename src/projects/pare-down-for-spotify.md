@@ -4,7 +4,7 @@ date: 2019-11-01
 description: Web tool for Spotify users.
 tags: ['featured', 'React', 'Web', 'NextJS', 'TailwindCSS']
 websiteUrl: https://pare-down.mtymon.me/
-sourceUrl: https://github.com/datguysheepy/pare-down
+sourceUrl: https://github.com/datguyducky/pare-down
 ---
 
 This project started as a really simple and minimalistic project, with the functionality being the most important part for me. 

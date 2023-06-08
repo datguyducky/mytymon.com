@@ -3,7 +3,7 @@ title: inbundle.games
 date: 2020-05-01
 description: Check if games were ever bundled on humblebundle.com.
 tags: ['React', 'PostgreSQL', 'Node.js', 'Backend', 'Web']
-sourceUrl: https://github.com/datguysheepy/inbundle.games
+sourceUrl: https://github.com/datguyducky/inbundle.games
 ---
 Please keep in mind that this project is no longer supported or maintained. Therefore, it is highly likely that any links associated with it may no longer be active.
 

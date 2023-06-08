@@ -4,7 +4,7 @@ date: 2020-07-01
 description: Extension to remove awards on Reddit.
 tags: ['JavaScript', 'WebExtensions API', 'Firefox', 'Chromium']
 websiteUrl: https://addons.mozilla.org/en-US/firefox/addon/no-awards-for-reddit/
-sourceUrl: https://github.com/datguysheepy/no-awards-fr
+sourceUrl: https://github.com/datguyducky/no-awards-fr
 ---
 
 This is a small project that I completed in a matter of a couple of hours. As I was browsing Reddit on my PC, I started to become increasingly frustrated with the sheer number of awards displayed on posts and comments. 

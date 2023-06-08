@@ -4,7 +4,7 @@ date: 2020-01-01
 description: RSS reader built with React Native.
 tags: ['featured', 'React Native', 'App', 'Android', 'Mobile']
 websiteUrl: https://play.google.com/store/apps/details?id=com.vrssreader.app
-sourceUrl: https://github.com/datguysheepy/v-rss-reader
+sourceUrl: https://github.com/datguyducky/v-rss-reader
 ---
 
 The idea for this project was simple - I wanted to start reading more news and various articles. However, I couldn't find any apps available for download at that time that I truly liked. So, I decided to create one for myself.

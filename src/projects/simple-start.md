@@ -4,7 +4,7 @@ date: 2019-08-01
 description: Minimalistic new tab page for Firefox.
 tags: ['featured', 'JavaScript', 'WebExtensions API', 'Firefox']
 websiteUrl: https://addons.mozilla.org/en-US/firefox/addon/simple-start/
-sourceUrl: https://github.com/datguysheepy/simple-start
+sourceUrl: https://github.com/datguyducky/simple-start
 ---
 A long time ago, I made the decision to switch my daily browser from Opera to Firefox, primarily for privacy reasons. 
 While Mozilla had created a truly remarkable browser, there was one feature I missed from Opera - the new tab page.
