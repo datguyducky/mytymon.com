@@ -22,8 +22,6 @@ However, I was well aware that manually adding and maintaining every possible ga
 After careful consideration, I selected the [RAWG API](https://rawg.io/apidocs) as it appeared to be a reliable and comprehensive service, and best of all, it offered free usage.
 
 ## The app
-As described in the section before, this app don't do much:
-
 As described in the previous section, this app doesn't have complex functionality. It performs the following steps:
 
 -> Calls the API. 
@@ -40,10 +38,7 @@ As described in the previous section, this app doesn't have complex functionalit
 <br />
 -> Displays all of this information in a simple user interface.
 
-<p>
-<br />
 and here's the app:
-</p>
 
 <img src="/public/inbundle.png" width="100%"/>
 
