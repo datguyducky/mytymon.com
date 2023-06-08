@@ -29,7 +29,7 @@ I had the opportunity to learn these technologies in the best possible way—by 
 I would love to write more about how I felt when using these two technologies, but I'm writing this article long after the redesign was finalized, and I don't remember much about the initial experience. 
 The only thing I can say is that I'm still not entirely sure how I feel about Tailwind. Maybe one day, I will write an article about it...
 
-## Redesigns of Pare Down:
+## Redesigns of Pare Down
 As you can see below, the first version of Pare Down was designed to be minimalistic both in terms of its visual design and code implementation.
 
 <p class="p-flex">
@@ -48,6 +48,6 @@ And this is the latest version that utilizes both Next.js and TailwindCSS. While
 	<img src="/public/paredown_v3.png" width="720"/>
 </p>
 
-## Future plans:
+## Future plans
 This is my second favorite project (after <a href="/projects/simple-start" class="text-link text-primary">Simple Start</a>) that I enjoy working on. Therefore, I am certain that more functionalities, design changes, and even complete redesigns or rewrites are coming in the future for this project. 
 In fact, I still have a lengthy list of things that I believe can be improved here.

@@ -21,7 +21,7 @@ However, here is a screenshot that reflects how it appeared at that time:
 
 <img src="/public/simplestart_1.png" width="720" class="img-border" />
 
-## The big redesign:
+## The big redesign
 Since I use this project on a daily basis, I chose it to serve as my 'playground' to apply what I've learned after working as a professional developer for two years. With this in mind, I decided to start this redesign, focussing on the following aspects:
 - The utmost importance was placed on the code quality, aiming for cleanliness and maintainability.
 - Addressing the previous subpar design, I aimed to create the UX/UI as good as the code itself.
@@ -34,7 +34,7 @@ Please note that as I write this article some time after the redesign, I do not 
 
 <img src="/public/simplestart_new.png" width="720" class="img-border" />
 
-## Future plans:
+## Future plans
 As mentioned above, this is a project that I use basically every day, and for that reason, I think it's the best project on which I can work.
 So every so often, I will come back to it to review what I've learned in the last couple of months or years as a developer.
 
