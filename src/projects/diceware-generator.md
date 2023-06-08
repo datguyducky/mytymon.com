@@ -3,7 +3,7 @@ title: Diceware Generator
 date: 2019-08-01
 description: Simple passphrases generator built with JavaScript.
 tags: ['JavaScript', 'Web']
-websiteUrl: https://diceware.mtymon.me/
+websiteUrl: https://diceware.mytymon.com/
 sourceUrl: https://github.com/datguyducky/diceware-generator
 ---
 

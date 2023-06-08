@@ -3,7 +3,7 @@ title: Pare Down for Spotify
 date: 2019-11-01
 description: Web tool for Spotify users.
 tags: ['featured', 'React', 'Web', 'NextJS', 'TailwindCSS']
-websiteUrl: https://pare-down.mtymon.me/
+websiteUrl: https://pare-down.mytymon.com/
 sourceUrl: https://github.com/datguyducky/pare-down
 ---
 
