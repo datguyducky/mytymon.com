@@ -1,25 +1,26 @@
 {
-	"name": "mytymon.com",
-	"version": "1.0.0",
+	"name": "datguyducky",
+	"version": "2.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "eleventy",
+		"start": "eleventy --serve"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"author": "datguyducky",
+	"license": "UNLICENSED",
 	"devDependencies": {
-		"@11ty/eleventy": "^2.0.1",
-		"@html-eslint/eslint-plugin": "^0.19.0",
-		"@html-eslint/parser": "^0.19.0",
-		"dayjs": "^1.11.7",
-		"eslint": "^8.41.0",
-		"eslint-plugin-css": "^0.8.0",
-		"eslint-plugin-html": "^7.1.0",
-		"eslint-plugin-jsx-a11y": "^6.7.1",
-		"markdown-it": "^13.0.1",
-		"markdown-it-attrs": "^4.1.6",
+		"@11ty/eleventy": "2.0.1",
+		"@html-eslint/eslint-plugin": "0.19.0",
+		"@html-eslint/parser": "0.19.0",
+		"dayjs": "1.11.8",
+		"eslint": "8.42.0",
+		"eslint-plugin-css": "0.8.0",
+		"eslint-plugin-html": "7.1.0",
+		"eslint-plugin-jsx-a11y": "6.7.1",
+		"markdown-it": "13.0.1",
+		"markdown-it-attrs": "4.1.6",
 		"prettier": "2.8.8"
 	}
 }
