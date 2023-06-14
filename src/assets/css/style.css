@@ -68,7 +68,7 @@ a {
 .navigation-header {
 	display: flex;
 	column-gap: 12px;
-	color: initial;
+	color: var(--color-text);
 }
 
 .navigation-header:hover p {
