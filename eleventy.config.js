@@ -11,6 +11,7 @@ module.exports = function (eleventyConfig) {
 	});
 	eleventyConfig.addPassthroughCopy({ 'src/assets/js': 'js/' });
 	eleventyConfig.addPassthroughCopy('CNAME');
+	eleventyConfig.addPassthroughCopy({ "favicon": "/" });
 
 	// ---------- Markdown extra options ----------
 	let markdownItOptions = {
