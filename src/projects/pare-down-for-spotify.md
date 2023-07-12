@@ -10,9 +10,9 @@ sourceUrl: https://github.com/datguyducky/pare-down
 This project started as a really simple and minimalistic project, with the functionality being the most important part for me. 
 However, over time, it underwent redesign and refactoring as I began to prioritize UX/UI and desired to add more functionality.
 
-The basic idea of this project was to enable users with large Spotify playlists and limited/slow internet connections to download their playlists more easily. 
+The basic idea of this project is to enable users with large Spotify playlists and limited/slow internet connections to download their playlists more easily. 
 This is achieved by creating "pared down" duplicates of selected playlists, containing a specific number of songs. 
-For example, from a playlist of over 1000 songs, users can create a new playlist with just 80 recent songs from the original one by simply clicking a few buttons."
+For example, from a playlist of over 1000 songs, users can create a new playlist with just 80 recent songs from the original one by simply clicking a few buttons.
 
 ## Challenges
 This is a list of challenges that I wrote about this project back when in time, while some things may be repeated in other sections of this article, 
