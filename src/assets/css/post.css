@@ -79,6 +79,10 @@ img.img-border {
 	grid-template-columns: repeat(2, 1fr);
 }
 
+.share-feedback {
+	margin-top: 24px;
+}
+
 a {
 	color: var(--color-primary);
 	font-weight: 600;

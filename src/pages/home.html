@@ -64,24 +64,22 @@ layout: 'home.html'
 		</div>
 	</article>
 
-	<!--
-		<article class="blog-section">
-			<div class="heading-with-button">
-				<h2>Latest Posts</h2>
-	
-				<a href="/posts" class="button-base">View all</a>
-			</div>
-	
-			<ul class="simple-posts-list">
-				{% for post in collections.posts | reverse %} {% if loop.index <= 6 %}
-				<li class="posts-list-item">
-					<a href="{{ post.url }}">
-						<span class="text-link">{{ post.data.title }}</span>
-						<span class="posts-list-item-date"> {{ post.date | formatDate('DD MMMM, YYYY') }} </span>
-					</a>
-				</li>
-				{% endif %} {% endfor %}
-			</ul>
-		</article>
-	-->
+	<article class="blog-section">
+		<div class="heading-with-button">
+			<h2>Latest Posts</h2>
+
+			<a href="/posts" class="button-base">View all</a>
+		</div>
+
+		<ul class="simple-posts-list">
+			{% for post in collections.posts | reverse %} {% if loop.index <= 6 %}
+			<li class="posts-list-item">
+				<a href="{{ post.url }}">
+					<span class="text-link">{{ post.data.title }}</span>
+					<span class="posts-list-item-date"> {{ post.date | formatDate('DD MMMM, YYYY') }} </span>
+				</a>
+			</li>
+			{% endif %} {% endfor %}
+		</ul>
+	</article>
 </div>
