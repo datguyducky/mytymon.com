@@ -75,7 +75,7 @@ withButtons: false
 
 			{{ content | safe }}
 
-			{% if tags.includes("posts") %}
+			{% if tags and tags.includes("posts") %}
 			<i class="share-feedback">
 				If you disagree with the content of this article or have any feedback, I am eager to learn from others.
 				Please feel free to contact me at blog@mytymon.com to share your thoughts. I welcome
