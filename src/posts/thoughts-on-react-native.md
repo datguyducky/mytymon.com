@@ -1,7 +1,6 @@
 ---
 title: Duct-tape artists using JS to make apps - my thoughts on React Native
 date: 2023-07-18
-description: Simple passphrases generator built with JavaScript.
 ---
 
 Remember all those articles hyping up React Native, claiming that big companies were rushing to it because it offered _performance comparable to native apps, lightning-fast development, and easy multi-platform compatibility_? Yeah, I remember too. But guess what? Now we're seeing articles left and right about companies ditching React Native and going back to native development for their apps.
