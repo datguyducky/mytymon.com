@@ -36,8 +36,8 @@ Or send me a message by email at <u><strong>contact</strong></u> at <u><strong>m
   - Git
   - Linux (Arch, Ubuntu)
   - PostgreSQL
-  - Nestjs
-  - Nextjs
+  - NestJS
+  - Next.js
   - Prisma
   - Apollo GraphQL
   - GraphQL
@@ -45,13 +45,14 @@ Or send me a message by email at <u><strong>contact</strong></u> at <u><strong>m
   - Inkscape
   - Mantine
   - Webpack and Vite
+  - Node.js
   
   </div>
   <div>
 
   ### Familiar with:
   - TailwindCSS
-  - Heroku
+  - Oracle Cloud
   - jQuery
   - Python
   - Bootstrap
