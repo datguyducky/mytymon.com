@@ -14,22 +14,33 @@ layout: 'home.html'
 		</h1>
 
 		<div class="intro-wrapper">
-			<p class="intro-text">
-				Welcome to my ducky world 💛
-				<br />
-				Where I showcase my projects and write my thoughts out...
-				<br />
-				<br />
-				Like many others, I never anticipated that being a developer would become my career path when I was
-				younger. As a child, my passion for building and creating with Lego bricks fueled my dreams of becoming
-				an architect. Little did I know that my path would take an exciting turn with the arrival of my first
-				PC, sparking a lifelong journey of exploration and passion in the world of technology.
-				<br />
-				<br />
-				Although I may fit the stereotype of a typical nerd who enjoys all things technology and sci-fi related,
-				such as space and Formula 1, there is still much more to discover
-				<a class="text-primary text-link" href="/about">about me</a>.
-			</p>
+			<div class="intro-box">
+				<h2 class="intro-text">
+					I'm a self-taught <strong class="text-primary">Full Stack developer</strong> with just a little bit
+					more than <strong class="text-primary">4 years</strong> of experience.
+					<br />
+					I mostly write with <strong class="text-primary">TypeScript/React/Node.js and NestJS</strong>.
+					<br />
+					As you can see on the right, I really love ducks... and
+					<a class="text-primary text-link" href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" rel="noopener noreferrer">rubber duck debugging</a>💛
+
+					<br /><br />
+					And in my free time I work on one of my personal projects that are listed below.
+					<br />
+					I love learning new stuff, and I reply to every email, so go ahead and
+					<a class="text-link text-primary" href="#contact">say hello</a>.
+				</h2>
+
+				<ul class="intro-links">
+					<li class="text-primary">
+						<a href="https://github.com/datguyducky" rel="noopener noreferrer">Github</a>
+					</li>
+					<li>/</li>
+					<li>
+						<a href="https://www.linkedin.com/in/datguyducky/" rel="noopener noreferrer">LinkedIn</a>
+					</li>
+				</ul>
+			</div>
 
 			<img src="/public/duck_hero.svg" alt="" />
 		</div>
@@ -37,26 +48,52 @@ layout: 'home.html'
 
 	<article class="projects-section">
 		<div class="heading-with-button">
-			<h2>Featured Projects</h2>
+			<h3>Featured projects</h3>
 
 			<a href="/projects" class="button-base">View all</a>
 		</div>
 
 		<div class="featured-projects-list">
-			{% for project in collections.featuredProjects | reverse %}
+			{% for project in projects | featuredProjects | sortDataByDate | reverse %}
 			<div class="project-card">
 				<p class="project-card-year">{{project.date | formatDate('YYYY')}}</p>
-				<p class="project-card-title">{{ project.data.title }}</p>
+				<p class="project-card-title">{{ project.title }}</p>
 
-				<p class="project-card-description">{{project.data.description}}</p>
-
+				<p class="project-card-description">{{project.description}}</p>
+				
 				<div class="project-card-buttons">
-					<a class="button-base button-small-highlight" href="{{ project.url }}">Article</a>
-
-					{% if project.data.websiteUrl %}
-					<a class="button-base button-small-highlight" href="{{ project.data.websiteUrl }}">Website</a>
-					{% endif %} {% if project.data.sourceUrl %}
-					<a class="button-base button-small-highlight" href="{{ project.data.sourceUrl }}">Code</a>
+					{% if project.url %}
+					<a class="button-base button-small-highlight" href="{{ project.url }}" rel="noopener noreferrer">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="button-icon"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M4.25 5.5a.75.75 0 00-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 00.75-.75v-4a.75.75 0 011.5 0v4A2.25 2.25 0 0112.75 17h-8.5A2.25 2.25 0 012 14.75v-8.5A2.25 2.25 0 014.25 4h5a.75.75 0 010 1.5h-5z"
+								clip-rule="evenodd"
+							/>
+							<path
+								fill-rule="evenodd"
+								d="M6.194 12.753a.75.75 0 001.06.053L16.5 4.44v2.81a.75.75 0 001.5 0v-4.5a.75.75 0 00-.75-.75h-4.5a.75.75 0 000 1.5h2.553l-9.056 8.194a.75.75 0 00-.053 1.06z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+						Visit
+					</a>
+					{% endif %} {% if project.source %}
+					<a class="button-base button-small-highlight" href="{{ project.source }}" rel="noopener noreferrer">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="button-icon">
+							<path 
+								fill-rule="evenodd"
+								d="M6.28 5.22a.75.75 0 010 1.06L2.56 10l3.72 3.72a.75.75 0 01-1.06 1.06L.97 10.53a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 0zm7.44 0a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L17.44 10l-3.72-3.72a.75.75 0 010-1.06zM11.377 2.011a.75.75 0 01.612.867l-2.5 14.5a.75.75 0 01-1.478-.255l2.5-14.5a.75.75 0 01.866-.612z"
+								clip-rule="evenodd"
+							/>
+						</svg>
+						Code
+					</a>
 					{% endif %}
 				</div>
 			</div>
@@ -64,9 +101,10 @@ layout: 'home.html'
 		</div>
 	</article>
 
+	{% if collections.posts | length > 0 %}
 	<article class="blog-section">
 		<div class="heading-with-button">
-			<h2>Latest Posts</h2>
+			<h3>Latest posts</h3>
 
 			<a href="/posts" class="button-base">View all</a>
 		</div>
@@ -76,10 +114,33 @@ layout: 'home.html'
 			<li class="posts-list-item">
 				<a href="{{ post.url }}">
 					<span class="text-link">{{ post.data.title }}</span>
-					<span class="posts-list-item-date"> {{ post.date | formatDate('DD MMMM, YYYY') }} </span>
+					<span class="posts-list-item-date"> {{ post.date | formatDate('MMMM DD, YYYY') }} </span>
 				</a>
 			</li>
 			{% endif %} {% endfor %}
 		</ul>
+	</article>
+	{% endif %}
+	
+	<article class="contact-section" id="contact">
+		<div class="section-heading">
+			<h3>Get in touch</h3>
+		</div>
+		
+		<div class="contact-content">
+			<p>
+				Email me at <strong class="text-primary">contact@mytymon.com</strong> or DM me using my social links.
+				<br />
+				Tell me something about yourself, like where on earth (nearest city) you’re emailing from.
+				<br />
+				Or just share one interesting fact that you've recently learned.
+				<br /><br />
+				<strong>I reply to every email within about a week</strong>. So if you don’t see a reply, check your spam folder
+			</p>
+
+			<p>
+				This website is built with <a href="https://www.11ty.dev/" rel="noopener noreferrer">Eleventy</a>. Source code is available on <a href="https://github.com/datguyducky/mytymon.com" rel="noopener noreferrer">Github</a>.
+			</p>
+		</div>
 	</article>
 </div>

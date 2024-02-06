@@ -1,5 +1,5 @@
 :root {
-	--color-primary: #74C0FC;
+	--color-primary: #1971c2;
 	
 	--color-text: #000000;
 	--color-text-subtle: #A6A7AB;
@@ -10,6 +10,8 @@
 }
 
 :root[data-theme='dark'] {
+	--color-primary: #74C0FC;
+	
 	--color-text: #FFFFFF;
 	--color-text-subtle: #A6A7AB;
 	--color-background-main: #1A1B1E;

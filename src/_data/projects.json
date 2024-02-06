@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Diceware Generator",
+    "date": "2019-08-01",
+    "description": "Simple passphrases generator built with JavaScript.",
+    "tags": ["JavaScript", "Web"],
+    "url": "https://diceware.mytymon.com/",
+    "source": "https://github.com/datguyducky/diceware-generator"
+  },
+  {
+    "title": "inbundle.games",
+    "date": "2020-05-01",
+    "description": "Check if games were ever bundled on humblebundle.com.",
+    "tags": ["React", "PostgreSQL", "Node.js", "Backend", "Web"],
+    "source": "https://github.com/datguyducky/diceware-generator"
+  },
+  {
+    "title": "No Awards for Reddit",
+    "date": "2020-07-01",
+    "description": "Extension to remove awards on Reddit.",
+    "tags": ["JavaScript", "WebExtensions API", "Firefox", "Chromium"],
+    "source": "https://github.com/datguyducky/no-awards-fr"
+  },
+  {
+    "title": "Pare Down for Spotify",
+    "date": "2019-11-01",
+    "description": "Web tool for Spotify users, built with Nest.js and TailwindCSS.",
+    "tags": ["React", "Web", "Next.js", "TailwindCSS"],
+    "url": "https://pare-down.mytymon.com/",
+    "source": "https://github.com/datguyducky/pare-down",
+    "featured": true
+  },
+  {
+    "title": "Simple Start",
+    "date": "2019-08-01",
+    "description": "Minimalistic new tab page for Firefox, created with React and Mantine.",
+    "tags": ["React", "WebExtensions API", "Firefox", "Mantine"],
+    "url": "https://addons.mozilla.org/en-US/firefox/addon/simple-start/",
+    "source": "https://github.com/datguyducky/simple-start",
+    "featured": true
+  },
+  {
+    "title": "V RSS Reader",
+    "date": "2020-01-01",
+    "description": "RSS reader for android devices built with React Native.",
+    "tags": ["React Native", "Android", "Mobile"],
+    "url": "https://play.google.com/store/apps/details?id=com.vrssreader.app",
+    "source": "https://github.com/datguyducky/v-rss-reader",
+    "featured": true
+  }
+]

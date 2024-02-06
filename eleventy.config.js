@@ -2,6 +2,7 @@ const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
 
 const { formatDate } = require('./11ty/filters/index.js');
+const { sortDataByDate } = require('./11ty/filters');
 
 module.exports = function (eleventyConfig) {
 	// ---------- Passthrough file copy ----------
@@ -11,7 +12,7 @@ module.exports = function (eleventyConfig) {
 	});
 	eleventyConfig.addPassthroughCopy({ 'src/assets/js': 'js/' });
 	eleventyConfig.addPassthroughCopy('CNAME');
-	eleventyConfig.addPassthroughCopy({ "favicon": "/" });
+	eleventyConfig.addPassthroughCopy({ favicon: '/' });
 
 	// ---------- Markdown extra options ----------
 	let markdownItOptions = {
@@ -28,12 +29,8 @@ module.exports = function (eleventyConfig) {
 		return collectionApi.getFilteredByGlob('src/posts/*.md');
 	});
 
-	eleventyConfig.addCollection('projects', function (collectionApi) {
-		return collectionApi.getFilteredByGlob('src/projects/*.md');
-	});
-
-	eleventyConfig.addCollection('featuredProjects', function (collectionApi) {
-		return collectionApi.getFilteredByTag('featured');
+	eleventyConfig.addFilter('featuredProjects', function (projects) {
+		return projects.filter(project => project?.featured);
 	});
 
 	eleventyConfig.addCollection('postsByYear', collectionApi => {
@@ -41,17 +38,16 @@ module.exports = function (eleventyConfig) {
 		const years = posts.map(post => post.date.getFullYear());
 		const uniqueYears = [...new Set(years)];
 
-		const postsByYear = uniqueYears.reduce((prev, year) => {
+		return uniqueYears.reduce((prev, year) => {
 			const filteredPosts = posts.filter(post => post.date.getFullYear() === year);
 
 			return [...prev, [year, filteredPosts]];
 		}, []);
-
-		return postsByYear;
 	});
 
 	// 	----------  Custom filters ----------
 	eleventyConfig.addFilter('formatDate', formatDate);
+	eleventyConfig.addFilter('sortDataByDate', sortDataByDate);
 
 	return {
 		htmlTemplateEngine: 'njk',
