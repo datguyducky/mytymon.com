@@ -1,5 +1,6 @@
 ---
 withHeader: true
+withComments: false
 ---
 
 <!DOCTYPE html>
@@ -52,7 +53,11 @@ withHeader: true
 				</a>
 				{% endif %}
 
-				<button class="theme-icon-wrapper button-base button-square-small" id="theme-button" aria-label="Theme switcher">
+				<button
+					class="theme-icon-wrapper button-base button-square-small"
+					id="theme-button"
+					aria-label="Theme switcher"
+				>
 					<img src="/public/duck_sleepy.svg" alt="" id="duck-sleepy" width="32" height="32" />
 					<img src="/public/duck_sunny.svg" alt="" id="duck-sunny" width="32" height="32" />
 				</button>
@@ -60,6 +65,34 @@ withHeader: true
 
 			<div class="container">{{ content | safe }}</div>
 		</div>
+
+		{% if withComments %}
+		<script>
+			// Handle giscus theme by using the website theme
+			let giscusTheme = localStorage.getItem("data-theme");
+			let giscusAttributes = {
+				"src": "https://giscus.app/client.js",
+				"data-repo": "datguyducky/mytymon.com",
+				"data-repo-id": "MDEwOlJlcG9zaXRvcnkyMDI1OTY4NjI=]",
+				"data-category": "Posts",
+				"data-category-id": "DIC_kwDODBNh_s4CdE4U",
+				"data-mapping": "pathname",
+				"data-strict": "0",
+				"data-reactions-enabled": "0",
+				"data-emit-metadata": "0",
+				"data-input-position": "bottom",
+				"data-theme": giscusTheme === "dark" ? "dark" : "light",
+				"data-lang": "en",
+				"data-loading": "lazy",
+				"crossorigin": "anonymous",
+				"async": "",
+			};
+
+			let giscusScript = document.createElement("script");
+			Object.entries(giscusAttributes).forEach(([key, value]) => giscusScript.setAttribute(key, value));
+			document.body.appendChild(giscusScript);
+		</script>
+		{% endif %}
 
 		<script src="/js/themeMode.js"></script>
 	</body>

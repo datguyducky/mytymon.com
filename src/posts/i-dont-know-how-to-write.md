@@ -1,6 +1,6 @@
 ---
 title: I don't know how to write...
-description: Small history of me trying to start writing, redesigns of personal projects (taking longer than supposed to), using ChatGPT for it and trying again after feeling about it.
+description: aka my thoughts about writing blog posts, redesigning my website (which took longer than expected), using ChatGPT for content, feeling bad about it and then trying again.
 date: 2024-02-08
 ---
 Some time ago, I had this great idea to start writing blog posts on my personal website.

@@ -1,6 +1,18 @@
+function sendMessage(message) {
+	const iframe = document.querySelector('iframe.giscus-frame');
+	if (!iframe) return;
+	iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+}
+
 const changeThemeToDark = () => {
 	document.documentElement.setAttribute('data-theme', 'dark'); // set theme to dark
 	localStorage.setItem('data-theme', 'dark'); // save theme to local storage
+
+	sendMessage({
+		setConfig: {
+			theme: 'dark',
+		},
+	});
 
 	// hiding and displaying correct image for change theme button
 	displayThemeImage('dark');
@@ -9,6 +21,11 @@ const changeThemeToDark = () => {
 const changeThemeToLight = () => {
 	document.documentElement.setAttribute('data-theme', 'light'); // set theme light
 	localStorage.setItem('data-theme', 'light'); // save theme to local storage
+	sendMessage({
+		setConfig: {
+			theme: 'light',
+		},
+	});
 
 	// hiding and displaying correct image for change theme button
 	displayThemeImage('light');

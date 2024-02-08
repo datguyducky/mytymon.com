@@ -336,6 +336,19 @@ a {
 	display: none;
 }
 
+.giscus {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 24px 32px 0;
+	width: auto;
+}
+
+.giscus-frame {
+	max-width: 1110px;
+	width: 100%;
+}
+
 @media screen and (max-width: 1180px) {
 	.projects-list {
 		grid-template-columns: repeat(2, 1fr);
