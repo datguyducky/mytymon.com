@@ -50,6 +50,23 @@ img {
 	max-width: 100%;
 }
 
+p {
+	margin: 0;
+	padding: 0 0 20px;
+	line-height: 30px;
+	font-size: 18px;
+}
+
+figure {
+	margin: 0 0 20px;
+}
+
+figure figcaption {
+	font-size: 16px;
+	color: var(--color-text-subtle);
+	font-style: italic;
+}
+
 .post-layout {
 	display: flex;
 	flex-direction: column;
@@ -62,7 +79,7 @@ img {
 
 .post-heading-button-wrap {
 	display: flex;
-	margin-bottom: 12px;
+	margin-bottom: 24px;
 }
 
 img.img-border {
@@ -80,6 +97,11 @@ img.img-border {
 
 .share-feedback {
 	margin-top: 24px;
+}
+
+.small-secondary {
+	font-size: 16px;
+	color: var(--color-text-subtle);
 }
 
 a {

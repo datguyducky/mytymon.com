@@ -1,5 +1,6 @@
 const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
+const mdfigcaption = require('markdown-it-image-figures');
 
 const { formatDate } = require('./11ty/filters/index.js');
 const { sortDataByDate } = require('./11ty/filters');
@@ -22,7 +23,10 @@ module.exports = function (eleventyConfig) {
 	};
 
 	eleventyConfig.amendLibrary('md', mdLib => mdLib.use(markdownItAttrs));
-	eleventyConfig.setLibrary('md', markdownIt(markdownItOptions));
+	eleventyConfig.setLibrary(
+		'md',
+		markdownIt(markdownItOptions).use(mdfigcaption, { figcaption: true, lazy: true, async: true }),
+	);
 
 	// ---------- Collections ----------
 	eleventyConfig.addCollection('posts', function (collectionApi) {
