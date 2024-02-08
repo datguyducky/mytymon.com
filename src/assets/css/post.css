@@ -62,8 +62,7 @@ img {
 
 .post-heading-button-wrap {
 	display: flex;
-	column-gap: 16px;
-	margin-top: 12px;
+	margin-bottom: 12px;
 }
 
 img.img-border {
@@ -101,9 +100,8 @@ a:hover {
 
 @media screen and (max-width: 434px) {
 	.post-heading-button-wrap {
-		margin-top: 16px;
 		flex-direction: column;
-		row-gap: 8px;
+		margin-bottom: 16px;
 	}
 }
 

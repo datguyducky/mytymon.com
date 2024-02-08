@@ -10,8 +10,12 @@ withHeader: true
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>{{ title + " | Tymon Myśliński" if title else "Tymon Myśliński" }}</title>
-		<meta name="description" content="Hey! I'm Tymon Myslinski a self-taught software developer from Poland. This is where I showcase my projects and write my thoughts out. 💛" />
+		<title>{{ title + " | Tymon Myśliński" if title else "Tymon Myśliński - Full Stack Developer" }}</title>
+		{% if description %}
+		<meta name="description" content="{{ description }}" />
+		{% else %}
+		<meta name="description" content="Self-taught Full Stack developer, working mostly with React, TypeScript and Node.js. Also with a big love for rubber yellow ducks." />
+		{% endif %}
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -23,6 +27,9 @@ withHeader: true
 
 		<link rel="stylesheet" href="/css/theme.css" />
 		<link rel="stylesheet" href="/css/style.css" />
+		{% if style %}
+		<link rel="stylesheet" href="/css/{{ style }}" />
+		{% endif %}
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
