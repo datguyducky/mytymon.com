@@ -26,6 +26,8 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
+    env: 
+      ELEVENTY_ENV: production
     steps:
       - uses: actions/checkout@v3
 

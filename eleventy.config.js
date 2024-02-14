@@ -4,6 +4,7 @@ const mdfigcaption = require('markdown-it-image-figures');
 
 const { formatDate } = require('./11ty/filters/index.js');
 const { sortDataByDate } = require('./11ty/filters');
+const { env } = require('@11ty/eleventy');
 
 module.exports = function (eleventyConfig) {
 	// ---------- Passthrough file copy ----------
@@ -35,6 +36,13 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addFilter('featuredProjects', function (projects) {
 		return projects.filter(project => project?.featured);
+	});
+
+	eleventyConfig.addFilter('toAbsoluteUrl', url => {
+		const isDevelopment = process.env.ELEVENTY_ENV === 'development';
+
+		const siteUrl = isDevelopment ? 'http://localhost:8080' : 'https:/mytymon.com';
+		return new URL(url, siteUrl).href;
 	});
 
 	eleventyConfig.addCollection('postsByYear', collectionApi => {

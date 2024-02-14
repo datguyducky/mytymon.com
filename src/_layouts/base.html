@@ -14,9 +14,21 @@ withComments: false
 		<title>{{ title + " | Tymon Myśliński" if title else "Tymon Myśliński - Full Stack Developer" }}</title>
 		{% if description %}
 		<meta name="description" content="{{ description }}" />
+		<meta property="og:description" content="{{ description }}" />
 		{% else %}
 		<meta name="description" content="Self-taught Full Stack developer, working mostly with React, TypeScript and Node.js. Also with a big love for rubber yellow ducks." />
+		<meta property="og:description" content="Self-taught Full Stack developer, working mostly with React, TypeScript and Node.js. Also with a big love for rubber yellow ducks." />
 		{% endif %}
+
+		<meta property="og:title" content="{{ title + ' | Tymon Myśliński' if title else 'Tymon Myśliński - Full Stack Developer' }}" />
+		<meta property="og:url" content="{{ page.url | toAbsoluteUrl }}" />
+		<meta property="og:type" content="{{ type if type else website }}" />
+		<meta property="og:image" content="/og-image.jpg" />
+		<meta property="og:image:width" content="144" />
+		<meta property="og:image:height" content="144" />
+
+		<link rel="canonical" href="{{ page.url | toAbsoluteUrl }}" />
+		<meta name="robots" content="index, follow" />
 
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

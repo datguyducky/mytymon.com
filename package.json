@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"build": "eleventy",
-		"start": "eleventy --serve"
+		"start": "ELEVENTY_ENV=development eleventy --serve"
 	},
 	"keywords": [],
 	"author": "datguyducky",
