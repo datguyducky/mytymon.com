@@ -54,7 +54,7 @@ withComments: false
 	</head>
 	<body>
 		<div class="root">
-			<section class="navigation layout">
+			<nav class="navigation layout">
 				{% if withHeader %}
 				<a href="/" class="navigation-header">
 					<img src="/public/duck_hero.svg" height="56" alt="" />
@@ -73,7 +73,7 @@ withComments: false
 					<img src="/public/duck_sleepy.svg" alt="" id="duck-sleepy" width="32" height="32" />
 					<img src="/public/duck_sunny.svg" alt="" id="duck-sunny" width="32" height="32" />
 				</button>
-			</section>
+			</nav>
 
 			<div class="container">{{ content | safe }}</div>
 		</div>

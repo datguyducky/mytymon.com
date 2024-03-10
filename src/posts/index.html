@@ -4,7 +4,7 @@ eleventyExcludeFromCollections: true
 layout: base.html
 ---
 
-<div class="layout">
+<section class="layout">
 	<h1 class="intro-heading">Posts</h1>
 	{% for year, yearPosts in collections.postsByYear %}
 
@@ -20,4 +20,4 @@ layout: base.html
 		{% endfor %}
 	</ul>
 	{% endfor %}
-</div>
+</section>
