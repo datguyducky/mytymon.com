@@ -102,27 +102,6 @@ layout: 'home.html'
 			{% endfor %}
 		</div>
 	</section>
-
-	{% if collections.posts | length > 0 %}
-	<section class="blog-section">
-		<header class="heading-with-button">
-			<h3>Latest posts</h3>
-
-			<a href="/posts" class="button-base">View all</a>
-		</header>
-
-		<ul class="simple-posts-list">
-			{% for post in collections.posts | reverse %} {% if loop.index <= 6 %}
-			<li class="posts-list-item">
-				<a href="{{ post.url }}">
-					<span class="text-link">{{ post.data.title }}</span>
-					<span class="posts-list-item-date"> {{ post.date | formatDate('MMMM DD, YYYY') }} </span>
-				</a>
-			</li>
-			{% endif %} {% endfor %}
-		</ul>
-	</section>
-	{% endif %}
 	
 	<section class="contact-section" id="contact">
 		<header class="section-heading">
