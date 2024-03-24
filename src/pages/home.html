@@ -24,7 +24,7 @@ layout: 'home.html'
 					I mostly write with <strong class="text-primary">TypeScript/React/Node.js and NestJS</strong>.
 					<br />
 					As you can see on the right, I really love ducks... and
-					<a class="text-primary text-link" href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" rel="noopener noreferrer">rubber duck debugging</a>💛
+					<a class="text-primary text-link" href="https://en.wikipedia.org/wiki/Rubber_duck_debugging" rel="noopener noreferrer" data-umami-event="rubber-duck-debugging-link">rubber duck debugging</a>💛
 
 					<br /><br />
 					And in my free time I work on one of my personal projects that are listed below.
@@ -35,11 +35,11 @@ layout: 'home.html'
 
 				<ul class="intro-links">
 					<li class="text-primary">
-						<a href="https://github.com/datguyducky" rel="noopener noreferrer">Github</a>
+						<a href="https://github.com/datguyducky" rel="noopener noreferrer" data-umami-event="github-link">Github</a>
 					</li>
 					<li>/</li>
 					<li>
-						<a href="https://www.linkedin.com/in/datguyducky/" rel="noopener noreferrer">LinkedIn</a>
+						<a href="https://www.linkedin.com/in/datguyducky/" rel="noopener noreferrer" data-umami-event="linkedin-link">LinkedIn</a>
 					</li>
 				</ul>
 			</div>
@@ -52,7 +52,7 @@ layout: 'home.html'
 		<header class="heading-with-button">
 			<h3>Featured projects</h3>
 
-			<a href="/projects" class="button-base">View all</a>
+			<a href="/projects" class="button-base" data-umami-event="projects-view-all-button">View all</a>
 		</header>
 
 		<div class="featured-projects-list">
@@ -65,7 +65,7 @@ layout: 'home.html'
 				
 				<div class="project-card-buttons">
 					{% if project.url %}
-					<a class="button-base button-small-highlight" href="{{ project.url }}" rel="noopener noreferrer">
+					<a class="button-base button-small-highlight" href="{{ project.url }}" rel="noopener noreferrer" data-umami-event="featured-project-visit-link" data-umami-event-project-name="{{ project.title }}">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 20 20"
@@ -86,7 +86,7 @@ layout: 'home.html'
 						Visit
 					</a>
 					{% endif %} {% if project.source %}
-					<a class="button-base button-small-highlight" href="{{ project.source }}" rel="noopener noreferrer">
+					<a class="button-base button-small-highlight" href="{{ project.source }}" rel="noopener noreferrer" data-umami-event="featured-project-source-link" data-umami-event-project-name="{{ project.title }}">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="button-icon">
 							<path 
 								fill-rule="evenodd"

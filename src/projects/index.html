@@ -17,7 +17,7 @@ layout: base.html
 
 			<div class="project-card-buttons">
 				{% if project.url %}
-				<a class="button-base button-small-highlight" href="{{ project.url }}">
+				<a class="button-base button-small-highlight" href="{{ project.url }}" data-umami-event="project-visit-link" data-umami-event-project-name="{{ project.title }}">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="button-icon">
 						<path
 							fill-rule="evenodd"
@@ -33,7 +33,7 @@ layout: base.html
 					Visit
 				</a>
 				{% endif %} {% if project.source %}
-				<a class="button-base button-small-highlight" href="{{ project.source }}">
+				<a class="button-base button-small-highlight" href="{{ project.source }}" data-umami-event="project-source-link" data-umami-event-project-name="{{ project.title }}">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="button-icon">
 						<path
 							fill-rule="evenodd"
